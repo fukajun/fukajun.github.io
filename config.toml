@@ -1,6 +1,7 @@
-baseURL = "http://localhost"
-title = "Geekblog"
+baseURL = "http://fukajun.github.io"
+title = "blog"
 theme = "hugo-geekblog"
+publishDir = "docs"
 
 pluralizeListTitles = false
 
