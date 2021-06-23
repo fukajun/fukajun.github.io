@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on blog</title>
+    <link>http://fukajun.github.io/posts/</link>
+    <description>Recent content in Posts on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Jun 2021 01:34:15 +0900</lastBuildDate><atom:link href="http://fukajun.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>これはこれ</title>
+      <link>http://fukajun.github.io/posts/start-hugo/</link>
+      <pubDate>Tue, 22 Jun 2021 01:34:15 +0900</pubDate>
+      
+      <guid>http://fukajun.github.io/posts/start-hugo/</guid>
+      <description>hugoはじめてみた    ひさしぶりにサイトを作ってみることにした ひさしぶりにサイトを作ってみることにした ひさしぶりにサイトを作ってみることにした
+cp a b はじめに    puts &amp;quot;ho0ahohohoho&amp;quot; </description>
+    </item>
+    
+  </channel>
+</rss>
