@@ -2,6 +2,8 @@ baseURL = "http://fukajun.github.io"
 title = "blog"
 theme = "hugo-geekblog"
 publishDir = "docs"
+hasCJKLanguage = true
+summaryLength = 140
 
 pluralizeListTitles = false
 
