@@ -2,7 +2,6 @@
 <html itemscope itemtype="http://schema.org/WebPage" lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.84.0" />
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +10,7 @@
 
 
 
-    <meta name="description" content="blog">
+    <meta name="description" content="Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby">
 
 
 
@@ -23,7 +22,7 @@
     
 
 
-    <title>blog</title>
+    <title>Rails on Lambda | blog</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -31,15 +30,17 @@
 
     
 
-    <meta property="og:title" content="blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.fukajun.com/" />
+    <meta property="og:title" content="Rails on Lambda" />
+<meta property="og:description" content="Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/rails-on-lambda/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-22T22:48:02&#43;09:00" />
+<meta property="article:modified_time" content="2021-06-23T01:48:02&#43;09:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="blog"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Rails on Lambda"/>
+<meta name="twitter:description" content="Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby"/>
 
 
     <link rel="preload" as="font" href="/fonts/Metropolis.woff2" type="font/woff2" crossorigin="anonymous">
@@ -64,14 +65,46 @@
 <!-- Made with Geekblog theme https://github.com/thegeeklab/hugo-geekblog -->
 
     
+
+
+
+
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
-    "@type": "WebSite",
-    
-    "name": "blog",
-    "url": "https:\/\/blog.fukajun.com",
-    "thumbnailUrl": "https:\/\/blog.fukajun.com\/brand.svg"
+    "@type": "BlogPosting",
+    "articleSection": "posts",
+    "name": "Rails on Lambda",
+    "headline": "Rails on Lambda",
+    "alternativeHeadline": "",
+    "description": "Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/blog.fukajun.com\/posts\/rails-on-lambda\/"
+    },
+    "author" : [
+    ],
+    "copyrightHolder" : "blog",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-06-22T22:48:02.00Z",
+    "datePublished": "2021-06-22T22:48:02.00Z",
+    "dateModified": "2021-06-23T01:48:02.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "blog",
+        "url": "https://blog.fukajun.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/blog.fukajun.com\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/blog.fukajun.com\/posts\/rails-on-lambda\/",
+    "wordCount" : "1140",
+    "genre" : [ ]
 }
 </script>
 
@@ -118,65 +151,161 @@
 
         <main class="gblog-page container">
             
-    
-    
-        
-    
-
-    
-    
     <article class="gblog-post">
         <header class="gblog-post__header">
-            <h1><a href="/posts/rails-on-lambda/">Rails on Lambda</a></h1>
+            
+            
+
+            <h1>Rails on Lambda</h1>
+            
+            <div class="gblog-post__meta">
+                <span class="no-wrap">
+                    <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
+                    <span class="gblog-post__tag">
+                        <time datetime="2021-06-23T01:48:02&#43;09:00">
+                            
+                                Updated on
+                            
+                            Jun 23, 2021
+                        </time>
+                    </span>
+                </span>
+
+                <span class="no-wrap">
+                    <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
+                    <span class="gblog-post__tag">3 min read</span>
+                </span>
+            </div>
+            
         </header>
 
         <section class="gblog-markdown">
-            Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby
+            <div class="gblog-post__anchorwrap">
+    <h2 id="rails-on-lambdaとは">
+        Rails on Lambdaとは？
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#rails-on-lambdaとは" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Rails on Lambdaとは？" href="#rails-on-lambda%e3%81%a8%e3%81%af">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p>AWS Lambda上でRailsが動くぽいので試してみた。
+過去にaws lambda上で動くrailsライクなフレームワーク<a class="gblog-markdown__link" href="https://rubyonjets.com/">jets</a>の存在は知っていたが、Railsがそのまま動くのは知らなかった。
+<a class="gblog-markdown__link" href="https://aws.amazon.com/jp/blogs/news/new-for-aws-lambda-container-image-support/">lambdaのコンテナイメージのサポート</a>が関係してそう。</p>
+<div class="gblog-post__anchorwrap">
+    <h2 id="lamby">
+        lamby
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#lamby" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor lamby" href="#lamby">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p><a class="gblog-markdown__link" href="https://github.com/customink/lamby">Lamby</a>は、まさにRailsをlambda上で走らせるためツールで、新規Railsプロジェクトの作成、Dockerイメージのビルド、Lambdaへのデプロイ、ApiGatewayの作成など面倒を見てくれる。</p>
+<div class="gblog-post__anchorwrap">
+    <h2 id="簡単に試す">
+        簡単に試す
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#簡単に試す" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 簡単に試す" href="#%e7%b0%a1%e5%8d%98%e3%81%ab%e8%a9%a6%e3%81%99">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p><a class="gblog-markdown__link" href="https://lamby.custominktech.com/docs/quick_start">公式のQuickStart</a>に書いてあるとおりにやるとできた。<br>
+とりあえず実行したコマンドは、下記のとおりだけど詳しくは公式をみるのが良い。</p>
+<div class="gblog-post__anchorwrap">
+    <h3 id="プロジェクト作成">
+        プロジェクト作成
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#プロジェクト作成" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor プロジェクト作成" href="#%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e4%bd%9c%e6%88%90">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><p>デプロイ等に必要なコマンドが配置されたRailsプロジェクトを作成してくれる。
+実行するとプロジェクト名を聞かれるので好きな名前を入力する。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ docker run <span class="se">\
+</span><span class="se"></span>  --rm <span class="se">\
+</span><span class="se"></span>  --interactive <span class="se">\
+</span><span class="se"></span>  --volume <span class="s2">&#34;</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="s2">:/var/task:delegated&#34;</span> <span class="se">\
+</span><span class="se"></span>  lambci/lambda:build-ruby2.7 <span class="se">\
+</span><span class="se"></span>  sam init --location <span class="s2">&#34;gh:customink/lamby-cookiecutter&#34;</span>
+</code></pre></div><pre><code>project_name [my_awesome_lambda]:
+</code></pre><div class="gblog-post__anchorwrap">
+    <h3 id="セットアップ">
+        セットアップ
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#セットアップ" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor セットアップ" href="#%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><p>作られたプロジェクトディレクトリに移動して、下記のコマンドを実行する。
+ここから、AWSに必要な設定が行われれるので
+<code>AWS_ACCESS_KEY_ID</code> <code>AWS_SECRET_ACCESS_KEY</code> <code>AWS_REGION</code> など自分のAWS環境にアクセスできるように環境変数等をせってシておく必要がある。</p>
+<pre><code>$ cd my_awesome_lambda
+$ ./bin/bootstrap
+$ ./bin/setup
+</code></pre><ul>
+<li><code>bootstrap</code> : ecrにリポジトリが作成される</li>
+<li><code>setup</code> : <code>bundle install</code> と <code>yarn</code> を実行して必要なgenやnpm packageがインストールされる</li>
+</ul>
+<div class="gblog-post__anchorwrap">
+    <h3 id="デプロイ">
+        デプロイ
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#デプロイ" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor デプロイ" href="#%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><p>あとは下記のコマンドを実行すれば動くようになる。<br>
+実行するとビルドされたdockerイメージがecrにプッシュされ、API Gateway、IAM、LambdaFunctionがClouformation経由で作成される。
+そして最後にアクセス可能になったURLが表示される。=&gt; <a href="https://xxxxx.execute-api.ap-northeast-1.amazonaws.com/production">https://xxxxx.execute-api.ap-northeast-1.amazonaws.com/production</a></p>
+<pre><code>$ ./bin/deploy
+</code></pre><p>おなじみの画面↓たったこれだけで、動くところまでいけるのは便利だ。</p>
+<figure><img src="/images/rails-screen-shot.png"/>
+</figure>
+
+<div class="gblog-post__anchorwrap">
+    <h2 id="作られたlambdaの設定について">
+        作られたlambdaの設定について
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#作られたlambdaの設定について" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 作られたlambdaの設定について" href="#%e4%bd%9c%e3%82%89%e3%82%8c%e3%81%9flambda%e3%81%ae%e8%a8%ad%e5%ae%9a%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><ul>
+<li>Memoryは、1792MBで設定されていた。しかし実行時の使用は150MB程度だったので、実装内容しだいではあるが、もうすこしサイズを下げて256MB程度でも良さそうだった。</li>
+</ul>
+<div class="gblog-post__anchorwrap">
+    <h2 id="速度について">
+        速度について
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#速度について" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 速度について" href="#%e9%80%9f%e5%ba%a6%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p>気になる速度について、 ChromeのDeveloperツールで確認すると、下記のような感じだった
+<code>rails new</code> したばかりのDBアクセスすらないrootページなのでなんともいえないけど<br>
+使えないほど遅い問感じではなかった。これについては別途もうすこし普通のActionを作って
+試してみたい。</p>
+<ul>
+<li>初回: 3-4s くらい</li>
+<li>2回目以降: 100ms-160ms くらい</li>
+</ul>
+<div class="gblog-post__anchorwrap">
+    <h2 id="まとめ">
+        まとめ
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#まとめ" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor まとめ" href="#%e3%81%be%e3%81%a8%e3%82%81">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p>正直、これだけだとDBアクセスもない、実用的な処理も入っていない状態
+なので、使えるかどうか判断しにくいけど、公式のドキュメントにも書いてある、相性の良さそうなAurora Servelessとも連携させるなどしてみたい。</p>
+<div class="gblog-post__anchorwrap">
+    <h2 id="参考">
+        参考
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-on-lambda/#参考" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 参考" href="#%e5%8f%82%e8%80%83">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><ul>
+<li><a href="https://aws.amazon.com/jp/blogs/news/new-for-aws-lambda-container-image-support/">https://aws.amazon.com/jp/blogs/news/new-for-aws-lambda-container-image-support/</a></li>
+<li><a href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-context.html">https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/runtimes-context.html</a></li>
+<li><a href="https://aws.amazon.com/jp/blogs/news/new-provisioned-concurrency-for-lambda-functions/">https://aws.amazon.com/jp/blogs/news/new-provisioned-concurrency-for-lambda-functions/</a></li>
+<li><a href="https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html">https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html</a></li>
+</ul>
+
+
         </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/rails-on-lambda/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-06-23T01:48:02&#43;09:00">
-                        
-                        Jun 23, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">3 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-        </footer>
     </article>
-    
-    
-
-<nav class="gblog-paging flex flex-even align-center" role="navigation">
-    <div class="gblog-paging__item gblog-paging__item--prev">
-    
-    </div>
-    <div class="gblog-paging__state">Page 1 of 1</div>
-    <div class="gblog-paging__item gblog-paging__item--next">
-    
-    </div>
-</nav>
-
 
         </main>
 

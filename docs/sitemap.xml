@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://fukajun.github.io/</loc>
-    <lastmod>2021-06-22T01:34:15+09:00</lastmod>
+    <loc>https://blog.fukajun.com/</loc>
+    <lastmod>2021-06-23T01:48:02+09:00</lastmod>
   </url><url>
-    <loc>http://fukajun.github.io/posts/</loc>
-    <lastmod>2021-06-22T01:34:15+09:00</lastmod>
+    <loc>https://blog.fukajun.com/posts/</loc>
+    <lastmod>2021-06-23T01:48:02+09:00</lastmod>
   </url><url>
-    <loc>http://fukajun.github.io/posts/start-hugo/</loc>
-    <lastmod>2021-06-22T01:34:15+09:00</lastmod>
+    <loc>https://blog.fukajun.com/posts/rails-on-lambda/</loc>
+    <lastmod>2021-06-23T01:48:02+09:00</lastmod>
   </url><url>
-    <loc>http://fukajun.github.io/authors/</loc>
+    <loc>https://blog.fukajun.com/authors/</loc>
   </url><url>
-    <loc>http://fukajun.github.io/tags/</loc>
+    <loc>https://blog.fukajun.com/tags/</loc>
   </url>
 </urlset>

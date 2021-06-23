@@ -1,4 +1,4 @@
-baseURL = "http://fukajun.github.io"
+baseURL = "https://blog.fukajun.com"
 title = "blog"
 theme = "hugo-geekblog"
 publishDir = "docs"

@@ -2,18 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog</title>
-    <link>http://fukajun.github.io/</link>
+    <link>https://blog.fukajun.com/</link>
     <description>Recent content on blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 Jun 2021 01:34:15 +0900</lastBuildDate><atom:link href="http://fukajun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jun 2021 22:48:02 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>これはこれ</title>
-      <link>http://fukajun.github.io/posts/start-hugo/</link>
-      <pubDate>Tue, 22 Jun 2021 01:34:15 +0900</pubDate>
+      <title>Rails on Lambda</title>
+      <link>https://blog.fukajun.com/posts/rails-on-lambda/</link>
+      <pubDate>Tue, 22 Jun 2021 22:48:02 +0900</pubDate>
       
-      <guid>http://fukajun.github.io/posts/start-hugo/</guid>
-      <description>hugoはじめてみた    ひさしぶりにサイトを作ってみることにした ひさしぶりにサイトを作ってみることにした ひさしぶりにサイトを作ってみることにした
-cp a b はじめに    puts &amp;quot;ho0ahohohoho&amp;quot; </description>
+      <guid>https://blog.fukajun.com/posts/rails-on-lambda/</guid>
+      <description>Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby</description>
     </item>
     
   </channel>
