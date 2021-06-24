@@ -103,7 +103,7 @@
         }
     },
     "url" : "https:\/\/blog.fukajun.com\/posts\/rails-on-lambda\/",
-    "wordCount" : "1140",
+    "wordCount" : "1177",
     "genre" : [ ]
 }
 </script>
@@ -273,13 +273,12 @@ $ ./bin/setup
         </a>
     </h2>
 </div><p>気になる速度について、 ChromeのDeveloperツールで確認すると、下記のような感じだった
-<code>rails new</code> したばかりのDBアクセスすらないrootページなのでなんともいえないけど<br>
-使えないほど遅い問感じではなかった。これについては別途もうすこし普通のActionを作って
-試してみたい。</p>
+<code>rails new</code> したばかりのDBアクセスすらないrootページなのでなんともいえないけど</p>
 <ul>
 <li>初回: 3-4s くらい</li>
 <li>2回目以降: 100ms-160ms くらい</li>
 </ul>
+<p><a class="gblog-markdown__link" href="https://dev.classmethod.jp/articles/measure-container-image-lambda-coldstart/">クラメソさん記事</a>によると、1000並列同時アクセスした場合でも同様に初回起動のもの(コールドスタートのもの)は遅くなるが、それほど変わらない速度でレスポンスを返せるとのことだった</p>
 <div class="gblog-post__anchorwrap">
     <h2 id="まとめ">
         まとめ
