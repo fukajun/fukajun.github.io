@@ -1,12 +1,15 @@
 ---
-title: "Try envoy(Health checks)"
+title: "try envoy(Health checks)"
 date: 2021-07-06T01:43:21+09:00
 draft: false
 ---
 
 ## try envoy
 
-### Detecting Unavailable Services Using health checks and outlier detection
+Envoyを触っていくにあたって、公式のチュートリアル[try-envoy](https://www.envoyproxy.io/try/)をやってみたきのメモ  
+今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について
+
+## Detecting Unavailable Services Using health checks and outlier detection
 
 各接続先へのヘルスチェックを行う方法について説明してくれている。
 clustersにhealth_checksを追加し、特定のヘルスチェックエンドポイントを指定してヘルスチェックを行う設定を行った。
@@ -114,4 +117,52 @@ admin:
 - 全てのリクエストを遮断する
 
 かを設定することができる。
+
+#### endpointsが複数あり優先度が設定してある場合の動作
+
+`lb_endpoints` が2つあり `priority`が0と1が設定されている下記のような設定のとき  
+それぞれの`lb_endpoints`のグループを、p=0とp=1と呼ぶことにする
+
+p=1全部のhostが健康な状態では、p=0だけにリクエストが送られる。そこからp=0で障害が起き
+ヘルスチェックに失敗した台数を補うように、p=1にリクエストが送られるようになる  
+トータルでp=0の100%相当のリクエストを受けれる台数が生きている場合はパニックモードには
+移行しない。100%未満になる場合は、各グループごとにしきい値(`healthy_panic_threshold`)を
+下回っていないかがチェックされ、それぞれのグループ毎に条件に当てはまる場合はパニックモードが適用される
+
+```yaml
+    load_assignment:
+      cluster_name: nodes
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address: { address: web1, port_value: 80 }
+        - endpoint:
+            address:
+              socket_address: { address: web2, port_value: 80 }
+        priority: 0
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address: { address: web3, port_value: 80 }
+        - endpoint:
+            address:
+              socket_address: { address: web4, port_value: 80 }
+        priority: 1
+```
+
+この辺のことは、[ココ](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/panic_threshold#arch-overview-load-balancing-panic-threshold) に書いてあるので正確にはそちらをみるとよさそう
+
+`If P=1 becomes unhealthy, panic threshold continues to be disregarded until the sum of the health P=0 + P=1 goes below 100%. At this point Envoy starts checking panic threshold value for each priority.`
+
+
+P=1が不調になった場合、P=0+P=1の不調の合計が100%以下になるまで、パニック閾値は無視され続けます。この時点で、Envoyは各プライオリティのパニック閾値のチェックを開始します。
+
+
+## 感想
+
+シンプルにヘルスチェックに失敗したホストに送られなくするだけだろうと思っていたが
+意外にヘルスチェックが失敗したときのリクエストの流し方にもいろいろ方針があることが
+わかった。頭の片隅に入れておくと、何かのタイミングで活かせそうな内容だったというか
+かなりシナリオの内容からはずれたところまできてしまった....
 
