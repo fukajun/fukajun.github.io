@@ -4,6 +4,7 @@ theme = "hugo-geekblog"
 publishDir = "docs"
 hasCJKLanguage = true
 summaryLength = 140
+googleAnalytics = "G-VBCRGHWQ32"
 
 pluralizeListTitles = false
 
