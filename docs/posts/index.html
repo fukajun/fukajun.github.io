@@ -125,6 +125,46 @@ if (!doNotTrack) {
     
     <article class="gblog-post">
         <header class="gblog-post__header">
+            <h1><a href="/posts/rails-development-problems/">Railsでハマルやつ</a></h1>
+        </header>
+
+        <section class="gblog-markdown">
+            Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定
+        </section>
+        <div class="gblog-post__readmore">
+            
+            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/rails-development-problems/">Read full post</a>
+            
+        </div>
+
+        <footer class="gblog-post__footer">
+            <span class="no-wrap">
+                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
+                <span class="gblog-post__tag">
+                    <time datetime="2021-07-19T03:50:43&#43;09:00">
+                        
+                        Jul 19, 2021
+                    </time>
+                </span>
+            </span>
+
+            <span class="no-wrap">
+                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
+                <span class="gblog-post__tag">1 min read</span>
+            </span>
+
+            
+
+            
+            
+
+            
+            
+        </footer>
+    </article>
+    
+    <article class="gblog-post">
+        <header class="gblog-post__header">
             <h1><a href="/posts/try-envoy-second/">try envoy(Health checks)</a></h1>
         </header>
 

@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/posts/</link>
     <description>Recent content in Posts on blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Jul 2021 01:43:21 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 03:50:43 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Railsでハマルやつ</title>
+      <link>https://blog.fukajun.com/posts/rails-development-problems/</link>
+      <pubDate>Mon, 19 Jul 2021 03:50:43 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/rails-development-problems/</guid>
+      <description>Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定</description>
+    </item>
+    
     <item>
       <title>try envoy(Health checks)</title>
       <link>https://blog.fukajun.com/posts/try-envoy-second/</link>

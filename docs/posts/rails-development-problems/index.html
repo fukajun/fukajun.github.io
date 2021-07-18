@@ -2,7 +2,6 @@
 <html itemscope itemtype="http://schema.org/WebPage" lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.84.0" />
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,7 +10,7 @@
 
 
 
-    <meta name="description" content="blog">
+    <meta name="description" content="Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定">
 
 
 
@@ -23,7 +22,7 @@
     
 
 
-    <title>blog</title>
+    <title>Railsでハマルやつ | blog</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -31,15 +30,17 @@
 
     
 
-    <meta property="og:title" content="blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.fukajun.com/" />
+    <meta property="og:title" content="Railsでハマルやつ" />
+<meta property="og:description" content="Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/rails-development-problems/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-19T03:50:43&#43;09:00" />
+<meta property="article:modified_time" content="2021-07-19T03:50:43&#43;09:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="blog"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Railsでハマルやつ"/>
+<meta name="twitter:description" content="Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定"/>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCRGHWQ32"></script>
@@ -76,14 +77,46 @@ if (!doNotTrack) {
 <!-- Made with Geekblog theme https://github.com/thegeeklab/hugo-geekblog -->
 
     
+
+
+
+
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
-    "@type": "WebSite",
-    
-    "name": "blog",
-    "url": "https:\/\/blog.fukajun.com",
-    "thumbnailUrl": "https:\/\/blog.fukajun.com\/brand.svg"
+    "@type": "BlogPosting",
+    "articleSection": "posts",
+    "name": "Railsでハマルやつ",
+    "headline": "Railsでハマルやつ",
+    "alternativeHeadline": "",
+    "description": "Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/blog.fukajun.com\/posts\/rails-development-problems\/"
+    },
+    "author" : [
+    ],
+    "copyrightHolder" : "blog",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-07-19T03:50:43.00Z",
+    "datePublished": "2021-07-19T03:50:43.00Z",
+    "dateModified": "2021-07-19T03:50:43.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "blog",
+        "url": "https://blog.fukajun.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/blog.fukajun.com\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/blog.fukajun.com\/posts\/rails-development-problems\/",
+    "wordCount" : "324",
+    "genre" : [ ]
 }
 </script>
 
@@ -130,145 +163,97 @@ if (!doNotTrack) {
 
         <main class="gblog-page container">
             
-    
-    
-        
-    
-
-    
-    
     <article class="gblog-post">
         <header class="gblog-post__header">
-            <h1><a href="/posts/rails-development-problems/">Railsでハマルやつ</a></h1>
+            
+            
+
+            <h1>Railsでハマルやつ</h1>
+            
+            <div class="gblog-post__meta">
+                <span class="no-wrap">
+                    <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
+                    <span class="gblog-post__tag">
+                        <time datetime="2021-07-19T03:50:43&#43;09:00">
+                            
+                            2021-07-19
+                        </time>
+                    </span>
+                </span>
+
+                <span class="no-wrap">
+                    <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
+                    <span class="gblog-post__tag">1 min read</span>
+                </span>
+            </div>
+            
         </header>
 
         <section class="gblog-markdown">
-            Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。生成された値を設定ファイル等に設定しておく assetsの配信設定
+            <div class="gblog-post__anchorwrap">
+    <h1 id="railsハマルやつ">
+        Railsハマルやつ
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#railsハマルやつ" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor Railsハマルやつ" href="#rails%e3%83%8f%e3%83%9e%e3%83%ab%e3%82%84%e3%81%a4">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h1>
+</div><div class="gblog-post__anchorwrap">
+    <h2 id="secret_key_base設定漏れで謎のエラー">
+        secret_key_base設定漏れで謎のエラー
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#secret_key_base設定漏れで謎のエラー" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor secret_key_base設定漏れで謎のエラー" href="#secret_key_base%e8%a8%ad%e5%ae%9a%e6%bc%8f%e3%82%8c%e3%81%a7%e8%ac%8e%e3%81%ae%e3%82%a8%e3%83%a9%e3%83%bc">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><div class="gblog-post__anchorwrap">
+    <h3 id="エラー">
+        エラー
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#エラー" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor エラー" href="#%e3%82%a8%e3%83%a9%e3%83%bc">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><ul>
+<li><code>An unhandled lowlevel error occurred. The application logs may have details.</code></li>
+</ul>
+<div class="gblog-post__anchorwrap">
+    <h3 id="対応">
+        対応
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#対応" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 対応" href="#%e5%af%be%e5%bf%9c">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><p><code>secret_key_base</code> が設定されていないことが原因、ちゃんと値が設定されているかを確認する
+値は、<code>bundle exec rake secret</code> で作ることができる。生成された値を設定ファイル等に設定しておく</p>
+<div class="gblog-post__anchorwrap">
+    <h2 id="assetsの配信設定">
+        assetsの配信設定
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#assetsの配信設定" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor assetsの配信設定" href="#assets%e3%81%ae%e9%85%8d%e4%bf%a1%e8%a8%ad%e5%ae%9a">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><div class="gblog-post__anchorwrap">
+    <h3 id="症状">
+        症状
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#症状" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 症状" href="#%e7%97%87%e7%8a%b6">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><ul>
+<li>Railsをproductionで起動したとき、css, jsが読み込めない</li>
+</ul>
+<div class="gblog-post__anchorwrap">
+    <h3 id="対応-1">
+        対応
+        <a data-clipboard-text="https://blog.fukajun.com/posts/rails-development-problems/#対応-1" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor 対応" href="#%e5%af%be%e5%bf%9c-1">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h3>
+</div><p><code>config/environments/production.rb</code> の <code>config.public_file_server.enabled</code> を <code>true</code> に設定する</p>
+<p>ただし、本来はpublic/配下のstaticなファイルをrailsに配信させるのはあまりおすすめの設定ではないので、nginx等のwebサーバーやcdnから配信するように吸うほうが良い</p>
+<p>Rails5以降だと上記の設定だけど、Rails4までだと <code>config.serve_static_files</code> という設定項目だった</p>
+
+
         </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/rails-development-problems/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-07-19T03:50:43&#43;09:00">
-                        
-                        Jul 19, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">1 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-        </footer>
     </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/try-envoy-second/">try envoy(Health checks)</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            try envoy Envoyを触っていくにあたって、公式のチュートリアルtry-envoyをやってみたきのメモ 今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について Detecting Unavailable Services Using health checks and outlier detection 各接続先へのヘルスチェックを行う方法について説明してくれている。 clustersにhealth_checks
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/try-envoy-second/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-07-06T01:43:21&#43;09:00">
-                        
-                        Jul 6, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">4 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-        </footer>
-    </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/rails-on-lambda/">Rails on Lambda</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/rails-on-lambda/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-06-23T01:48:02&#43;09:00">
-                        
-                        Jun 23, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">3 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-        </footer>
-    </article>
-    
-    
-
-<nav class="gblog-paging flex flex-even align-center" role="navigation">
-    <div class="gblog-paging__item gblog-paging__item--prev">
-    
-    </div>
-    <div class="gblog-paging__state">Page 1 of 1</div>
-    <div class="gblog-paging__item gblog-paging__item--next">
-    
-    </div>
-</nav>
-
 
         </main>
 
