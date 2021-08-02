@@ -13,8 +13,9 @@ draft: false
 
 ### 対応
 
-`secret_key_base` が設定されていないことが原因、ちゃんと値が設定されているかを確認する
-値は、`bundle exec rake secret` で作ることができる。生成された値を設定ファイル等に設定しておく
+`secret_key_base` が設定されていないことが原因、ちゃんと値が設定されているかを確認する  
+値は、`bundle exec rake secret` で作ることができる。  
+生成された値を設定ファイル等に設定しておく
 
 
 
