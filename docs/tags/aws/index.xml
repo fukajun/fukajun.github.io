@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aws on blog</title>
+    <link>https://blog.fukajun.com/tags/aws/</link>
+    <description>Recent content in aws on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Aug 2021 21:11:47 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CloudWatch Metrics で変化量をアラームにする</title>
+      <link>https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/</link>
+      <pubDate>Thu, 05 Aug 2021 21:11:47 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/</guid>
+      <description>概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時</description>
+    </item>
+    
+  </channel>
+</rss>
