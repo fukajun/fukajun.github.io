@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/</link>
     <description>Recent content on blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Aug 2021 21:11:47 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Aug 2021 14:19:27 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git logで変更の種別(変更/削除/追加)を表示する</title>
+      <link>https://blog.fukajun.com/posts/git-log-name-status/</link>
+      <pubDate>Sun, 15 Aug 2021 14:19:27 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/git-log-name-status/</guid>
+      <description>概要 ファイル生成コマンドが行った変更を取り消したい。 そのために、gitの履歴で git status ライクにファイル毎の変更種別を方法を調べた。 具体的には、A:追加 M:変更 D:削除のように表示してほしい。 やり方 git log --name-status を使う。 同様に git show --name-status &amp;lt;commit hash&amp;gt; で特定の変更のみをみることもできる 表示例 commit b2931fae2dc118ad34d19fe28f2bb0f6ef2244a6 Author: fukajun &amp;lt;xxxxxx&amp;gt; Date: Sat Sep 22</description>
+    </item>
+    
     <item>
       <title>CloudWatch Metrics で変化量をアラームにする</title>
       <link>https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/</link>
