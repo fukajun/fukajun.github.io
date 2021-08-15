@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on blog</title>
+    <title>Posts on fukajun blog</title>
     <link>https://blog.fukajun.com/posts/</link>
-    <description>Recent content in Posts on blog</description>
+    <description>Recent content in Posts on fukajun blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 15 Aug 2021 14:19:27 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>

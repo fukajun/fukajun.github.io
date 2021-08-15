@@ -1,5 +1,5 @@
 baseURL = "https://blog.fukajun.com"
-title = "blog"
+title = "fukajun blog"
 theme = "hugo-geekblog"
 publishDir = "docs"
 hasCJKLanguage = true
