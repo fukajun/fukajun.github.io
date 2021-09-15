@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backend on fukajun blog</title>
+    <link>https://blog.fukajun.com/tags/backend/</link>
+    <description>Recent content in backend on fukajun blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Jul 2021 03:50:43 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Railsでハマルやつ</title>
+      <link>https://blog.fukajun.com/posts/rails-development-problems/</link>
+      <pubDate>Mon, 19 Jul 2021 03:50:43 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/rails-development-problems/</guid>
+      <description>Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定</description>
+    </item>
+    
+    <item>
+      <title>Rails on Lambda</title>
+      <link>https://blog.fukajun.com/posts/rails-on-lambda/</link>
+      <pubDate>Tue, 22 Jun 2021 22:48:02 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/rails-on-lambda/</guid>
+      <description>Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby</description>
+    </item>
+    
+  </channel>
+</rss>

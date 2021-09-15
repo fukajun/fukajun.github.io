@@ -3,6 +3,7 @@ title: "Rails on Lambda"
 date: 2021-06-22T22:48:02+09:00
 lastmod: 2021-06-23T01:48:02+09:00
 draft: false
+tags: ["backend"]
 ---
 
 ## Rails on Lambdaとは？

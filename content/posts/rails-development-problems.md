@@ -2,6 +2,7 @@
 title: "Railsでハマルやつ"
 date: 2021-07-19T03:50:43+09:00
 draft: false
+tags: ["backend"]
 ---
 
 # Railsハマルやつ
