@@ -63,3 +63,4 @@ gem installコマンドを叩いたときに表示されるエラーメッセー
 ## 参考情報
 - [library mkmf (Ruby 3.0.0 リファレンスマニュアル)](https://docs.ruby-lang.org/ja/latest/library/mkmf.html)
 - [cc コンパイラオプション](https://docs.oracle.com/cd/E19957-01/806-4836/ccOptions.html)
+- [CXXFLAGSとCPPFLAGSの違い – かひわし4v1.memo](https://blog.ef67daisuki.club/2017/05/cxxflags%E3%81%A8cppflags%E3%81%AE%E9%81%95%E3%81%84/)
