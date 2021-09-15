@@ -30,6 +30,6 @@ tags: ["backend"]
 
 `config/environments/production.rb` の `config.public_file_server.enabled` を `true` に設定する 
 
-ただし、本来はpublic/配下のstaticなファイルをrailsに配信させるのはあまりおすすめの設定ではないので、nginx等のwebサーバーやcdnから配信するように吸うほうが良い
+ただし、本来はpublic/配下のstaticなファイルをrailsに配信させるのはあまりおすすめの設定ではないので、nginx等のwebサーバーやcdnから配信するほうが良い
 
 Rails5以降だと上記の設定だけど、Rails4までだと `config.serve_static_files` という設定項目だった
