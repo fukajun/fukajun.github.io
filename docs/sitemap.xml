@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.fukajun.com/tags/backend/</loc>
+    <lastmod>2021-09-03T01:31:55+09:00</lastmod>
+  </url><url>
     <loc>https://blog.fukajun.com/</loc>
     <lastmod>2021-09-03T01:31:55+09:00</lastmod>
   </url><url>
@@ -11,10 +14,10 @@
     <loc>https://blog.fukajun.com/posts/</loc>
     <lastmod>2021-09-03T01:31:55+09:00</lastmod>
   </url><url>
-    <loc>https://blog.fukajun.com/posts/git-log-name-status/</loc>
-    <lastmod>2021-08-15T14:19:27+09:00</lastmod>
-  </url><url>
     <loc>https://blog.fukajun.com/tags/</loc>
+    <lastmod>2021-09-03T01:31:55+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/posts/git-log-name-status/</loc>
     <lastmod>2021-08-15T14:19:27+09:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/tags/tools/</loc>
@@ -25,9 +28,6 @@
   </url><url>
     <loc>https://blog.fukajun.com/tags/infra/</loc>
     <lastmod>2021-08-05T21:11:47+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/tags/backend/</loc>
-    <lastmod>2021-07-19T03:50:43+09:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/rails-development-problems/</loc>
     <lastmod>2021-07-19T03:50:43+09:00</lastmod>

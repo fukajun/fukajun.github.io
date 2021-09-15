@@ -2,6 +2,7 @@
 title: "gemのインストールに失敗したときにやること"
 date: 2021-09-03T01:31:55+09:00
 draft: false
+tags: ["backend"]
 ---
 
 ## 概要

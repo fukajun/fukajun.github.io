@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/tags/backend/</link>
     <description>Recent content in backend on fukajun blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Jul 2021 03:50:43 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 01:31:55 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gemのインストールに失敗したときにやること</title>
+      <link>https://blog.fukajun.com/posts/install-native-extension-gem/</link>
+      <pubDate>Fri, 03 Sep 2021 01:31:55 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/install-native-extension-gem/</guid>
+      <description>概要 gemのインストールで失敗のほとんどは、native extensionありのgemじゃないかと思う 今回は mysql2 gem のインストール時のハマったときのことを参考に失敗したときにやることについて書いてみた ちなみに、このままやればできるという内容ではないです インストールできたコマンド まずは</description>
+    </item>
+    
     <item>
       <title>Railsでハマルやつ</title>
       <link>https://blog.fukajun.com/posts/rails-development-problems/</link>
