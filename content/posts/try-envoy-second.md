@@ -1,7 +1,8 @@
 ---
-title: "try envoy(Health checks)"
+title: "Try envoy(HealthChecks)"
 date: 2021-07-06T01:43:21+09:00
 draft: false
+tags: ["infra"]
 ---
 
 ## try envoy

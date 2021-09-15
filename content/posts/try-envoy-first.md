@@ -1,7 +1,8 @@
 ---
 title: "Try envoy(GettingStarted/NGINX/HAProxy)"
 date: 2021-06-30T10:52:04+09:00
-draft: true
+draft: false
+tags: ["infra"]
 ---
 
 ## try envoyをやってみた

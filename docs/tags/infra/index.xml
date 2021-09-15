@@ -15,5 +15,23 @@
       <description>概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時</description>
     </item>
     
+    <item>
+      <title>Try envoy(HealthChecks)</title>
+      <link>https://blog.fukajun.com/posts/try-envoy-second/</link>
+      <pubDate>Tue, 06 Jul 2021 01:43:21 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/try-envoy-second/</guid>
+      <description>try envoy Envoyを触っていくにあたって、公式のチュートリアルtry-envoyをやってみたきのメモ 今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について Detecting Unavailable Services Using health checks and outlier detection 各接続先へのヘルスチェックを行う方法について説明してくれている。 clustersにhealth_checks</description>
+    </item>
+    
+    <item>
+      <title>Try envoy(GettingStarted/NGINX/HAProxy)</title>
+      <link>https://blog.fukajun.com/posts/try-envoy-first/</link>
+      <pubDate>Wed, 30 Jun 2021 10:52:04 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/try-envoy-first/</guid>
+      <description>try envoyをやってみた 公式にものっているチュートリアルtry envoyをやってみた https://www.katacoda.com/envoyproxy チュートリアル内の設定ファイルが1.18あたりだと動かないので書き換えてみた envoyについて サービスディスカバリ Istioの内部で動いているやつ プロキシーのすごいやつ envoyのコア機能につい</description>
+    </item>
+    
   </channel>
 </rss>
