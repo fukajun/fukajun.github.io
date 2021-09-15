@@ -52,6 +52,15 @@
     </item>
     
     <item>
+      <title>Try envoy(GettingStarted/NGINX/HAProxy)</title>
+      <link>https://blog.fukajun.com/posts/drafts/try-envoy-first/</link>
+      <pubDate>Wed, 30 Jun 2021 10:52:04 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/drafts/try-envoy-first/</guid>
+      <description>try envoyをやってみた 公式にものっているチュートリアルtry envoyをやってみた https://www.katacoda.com/envoyproxy チュートリアル内の設定ファイルが1.18あたりだと動かないので書き換えてみた envoyについて サービスディスカバリ Istioの内部で動いているやつ プロキシーのすごいやつ envoyのコア機能につい</description>
+    </item>
+    
+    <item>
       <title>Rails on Lambda</title>
       <link>https://blog.fukajun.com/posts/rails-on-lambda/</link>
       <pubDate>Tue, 22 Jun 2021 22:48:02 +0900</pubDate>
