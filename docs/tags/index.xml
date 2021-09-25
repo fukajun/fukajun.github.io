@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/tags/</link>
     <description>Recent content in Tags on fukajun blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 03 Sep 2021 01:31:55 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 02:18:58 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>infra</title>
+      <link>https://blog.fukajun.com/tags/infra/</link>
+      <pubDate>Sun, 26 Sep 2021 02:18:58 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/tags/infra/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>backend</title>
       <link>https://blog.fukajun.com/tags/backend/</link>
@@ -21,15 +30,6 @@
       <pubDate>Sun, 15 Aug 2021 14:19:27 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>infra</title>
-      <link>https://blog.fukajun.com/tags/infra/</link>
-      <pubDate>Thu, 05 Aug 2021 21:11:47 +0900</pubDate>
-      
-      <guid>https://blog.fukajun.com/tags/infra/</guid>
       <description></description>
     </item>
     

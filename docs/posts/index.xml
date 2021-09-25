@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/posts/</link>
     <description>Recent content in Posts on fukajun blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 03 Sep 2021 01:31:55 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Sep 2021 02:18:58 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>envoyでrequest headerを変更する</title>
+      <link>https://blog.fukajun.com/posts/change-request-header-in-envoy/</link>
+      <pubDate>Sun, 26 Sep 2021 02:18:58 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/change-request-header-in-envoy/</guid>
+      <description>概要 envoyを経由してhttpリクエストを、APPサーバーに送るときのヘッダー情報を追加/変更をしてみる やったこと route_config.request_headers_to_add を利用する。headerに key value を指定する。 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、append: true だと httpの値が来た場</description>
+    </item>
+    
     <item>
       <title>gemのインストールに失敗したときにやること</title>
       <link>https://blog.fukajun.com/posts/install-native-extension-gem/</link>
