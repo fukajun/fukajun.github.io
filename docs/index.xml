@@ -5,7 +5,16 @@
     <link>https://blog.fukajun.com/</link>
     <description>Recent content on fukajun blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Sep 2021 02:18:58 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 11:20:19 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell Commands Cheet Sheet</title>
+      <link>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</link>
+      <pubDate>Mon, 27 Sep 2021 11:20:19 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</guid>
+      <description>find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d</description>
+    </item>
+    
     <item>
       <title>envoyでrequest headerを変更する</title>
       <link>https://blog.fukajun.com/posts/change-request-header-in-envoy/</link>

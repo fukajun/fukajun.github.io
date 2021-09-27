@@ -10,7 +10,7 @@
 
 
 
-    <meta name="description" content="fukajun blog">
+    <meta name="description" content="find 2日以上前に変更のあったディレクトリ -mtime : &#43;2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime &#43;2 -type d">
 
 
 
@@ -22,7 +22,7 @@
     
 
 
-    <title>Infra | fukajun blog</title>
+    <title>Shell Commands Cheet Sheet | fukajun blog</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -30,15 +30,17 @@
 
     
 
-    <meta property="og:title" content="infra" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.fukajun.com/tags/infra/" />
+    <meta property="og:title" content="Shell Commands Cheet Sheet" />
+<meta property="og:description" content="find 2日以上前に変更のあったディレクトリ -mtime : &#43;2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime &#43;2 -type d" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/shell-commands-cheet-sheet/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-27T11:20:19&#43;09:00" />
+<meta property="article:modified_time" content="2021-09-27T11:20:19&#43;09:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="infra"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Shell Commands Cheet Sheet"/>
+<meta name="twitter:description" content="find 2日以上前に変更のあったディレクトリ -mtime : &#43;2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime &#43;2 -type d"/>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCRGHWQ32"></script>
@@ -75,6 +77,49 @@ if (!doNotTrack) {
 <!-- Made with Geekblog theme https://github.com/thegeeklab/hugo-geekblog -->
 
     
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "posts",
+    "name": "Shell Commands Cheet Sheet",
+    "headline": "Shell Commands Cheet Sheet",
+    "alternativeHeadline": "",
+    "description": "find 2日以上前に変更のあったディレクトリ -mtime : \u002b2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find .\/ -mtime \u002b2 -type d",
+    "inLanguage": "en",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/blog.fukajun.com\/posts\/shell-commands-cheet-sheet\/"
+    },
+    "author" : [
+    ],
+    "copyrightHolder" : "fukajun blog",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-09-27T11:20:19.00Z",
+    "datePublished": "2021-09-27T11:20:19.00Z",
+    "dateModified": "2021-09-27T11:20:19.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "fukajun blog",
+        "url": "https://blog.fukajun.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/blog.fukajun.com\/brand.svg",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "url" : "https:\/\/blog.fukajun.com\/posts\/shell-commands-cheet-sheet\/",
+    "wordCount" : "60",
+    "genre" : [ "infra" ]
+}
+</script>
+
 
      
 
@@ -119,7 +164,7 @@ if (!doNotTrack) {
         
         
         <li>
-            <a class="gblog-nav__entry  is-active " href="/tags/infra/">infra</a>
+            <a class="gblog-nav__entry " href="/tags/infra/">infra</a>
         </li>
         
         
@@ -136,306 +181,60 @@ if (!doNotTrack) {
 
         <main class="gblog-page container">
             
-    
-    
-
-    
-    
     <article class="gblog-post">
         <header class="gblog-post__header">
-            <h1><a href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a></h1>
+            
+            
+
+            <h1>Shell Commands Cheet Sheet</h1>
+            
+            <div class="gblog-post__meta">
+                <span class="no-wrap">
+                    <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
+                    <span class="gblog-post__tag">
+                        <time datetime="2021-09-27T11:20:19&#43;09:00">
+                            
+                            2021-09-27
+                        </time>
+                    </span>
+                </span>
+
+                <span class="no-wrap">
+                    <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
+                    <span class="gblog-post__tag">1 min read</span>
+                </span>
+            </div>
+            
         </header>
 
         <section class="gblog-markdown">
-            find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d
+            <div class="gblog-post__anchorwrap">
+    <h2 id="find">
+        find
+        <a data-clipboard-text="https://blog.fukajun.com/posts/shell-commands-cheet-sheet/#find" class="gblog-post__anchor gblog-post__anchor--right clip" aria-label="Anchor find" href="#find">
+            <svg class="icon gblog_link"><use xlink:href="#gblog_link"></use></svg>
+        </a>
+    </h2>
+</div><p>2日以上前に変更のあったディレクトリ</p>
+<ul>
+<li>-mtime :
+<ul>
+<li>+2 2日以前の変更</li>
+<li>-2 2日以降の変更</li>
+</ul>
+</li>
+<li>-type
+<ul>
+<li>d : ディレクトリ</li>
+<li>f : 通常ファイル</li>
+</ul>
+</li>
+</ul>
+<pre><code>find ./ -mtime +2 -type d
+</code></pre>
+
         </section>
-        <div class="gblog-post__readmore">
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-09-27T11:20:19&#43;09:00">
-                        
-                        Sep 27, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">1 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-            
-                
-                
-                    
-                    <span class="no-wrap">
-                    <svg class="icon gblog_bookmarks"><use xlink:href="#gblog_bookmarks"></use></svg>
-                    
-<span class="gblog-post__tag gblog-button">
-    <a class="gblog-button__link" href="/tags/infra/" title="All posts tagged with 'infra'">infra</a>
-</span>
-
-                    </span>
-                    
-                
-                
-            
-            
-        </footer>
     </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            概要 envoyを経由してhttpリクエストを、APPサーバーに送るときのヘッダー情報を追加/変更をしてみる やったこと route_config.request_headers_to_add を利用する。headerに key value を指定する。 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、append: true だと httpの値が来た場
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/change-request-header-in-envoy/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-09-26T02:18:58&#43;09:00">
-                        
-                        Sep 26, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">1 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-            
-                
-                
-                    
-                    <span class="no-wrap">
-                    <svg class="icon gblog_bookmarks"><use xlink:href="#gblog_bookmarks"></use></svg>
-                    
-<span class="gblog-post__tag gblog-button">
-    <a class="gblog-button__link" href="/tags/infra/" title="All posts tagged with 'infra'">infra</a>
-</span>
-
-                    </span>
-                    
-                
-                
-            
-            
-        </footer>
-    </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/cloud-watch-metircs-alarm-use-diff/">CloudWatch Metrics で変化量をアラームにする</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/cloud-watch-metircs-alarm-use-diff/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-08-05T21:11:47&#43;09:00">
-                        
-                        Aug 5, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">1 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-            
-                
-                
-                    
-                    <span class="no-wrap">
-                    <svg class="icon gblog_bookmarks"><use xlink:href="#gblog_bookmarks"></use></svg>
-                    
-<span class="gblog-post__tag gblog-button">
-    <a class="gblog-button__link" href="/tags/infra/" title="All posts tagged with 'infra'">infra</a>
-</span>
-
-                    </span>
-                    
-                
-                
-            
-            
-        </footer>
-    </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/try-envoy-second/">Try envoy(HealthChecks)</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            try envoy Envoyを触っていくにあたって、公式のチュートリアルtry-envoyをやってみたきのメモ 今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について Detecting Unavailable Services Using health checks and outlier detection 各接続先へのヘルスチェックを行う方法について説明してくれている。 clustersにhealth_checks
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/try-envoy-second/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-07-06T01:43:21&#43;09:00">
-                        
-                        Jul 6, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">4 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-            
-                
-                
-                    
-                    <span class="no-wrap">
-                    <svg class="icon gblog_bookmarks"><use xlink:href="#gblog_bookmarks"></use></svg>
-                    
-<span class="gblog-post__tag gblog-button">
-    <a class="gblog-button__link" href="/tags/infra/" title="All posts tagged with 'infra'">infra</a>
-</span>
-
-                    </span>
-                    
-                
-                
-            
-            
-        </footer>
-    </article>
-    
-    <article class="gblog-post">
-        <header class="gblog-post__header">
-            <h1><a href="/posts/try-envoy-first/">Try envoy(GettingStarted/NGINX/HAProxy)</a></h1>
-        </header>
-
-        <section class="gblog-markdown">
-            try envoyをやってみた 公式にものっているチュートリアルtry envoyをやってみた https://www.katacoda.com/envoyproxy チュートリアル内の設定ファイルが1.18あたりだと動かないので書き換えてみた envoyについて サービスディスカバリ Istioの内部で動いているやつ プロキシーのすごいやつ envoyのコア機能につい
-        </section>
-        <div class="gblog-post__readmore">
-            
-            <a class="flex-inline align-center fake-link" title="Read full post" href="/posts/try-envoy-first/">Read full post</a>
-            
-        </div>
-
-        <footer class="gblog-post__footer">
-            <span class="no-wrap">
-                <svg class="icon gblog_date"><use xlink:href="#gblog_date"></use></svg>
-                <span class="gblog-post__tag">
-                    <time datetime="2021-06-30T10:52:04&#43;09:00">
-                        
-                        Jun 30, 2021
-                    </time>
-                </span>
-            </span>
-
-            <span class="no-wrap">
-                <svg class="icon gblog_timer"><use xlink:href="#gblog_timer"></use></svg>
-                <span class="gblog-post__tag">3 min read</span>
-            </span>
-
-            
-
-            
-            
-
-            
-            
-            
-                
-                
-                    
-                    <span class="no-wrap">
-                    <svg class="icon gblog_bookmarks"><use xlink:href="#gblog_bookmarks"></use></svg>
-                    
-<span class="gblog-post__tag gblog-button">
-    <a class="gblog-button__link" href="/tags/infra/" title="All posts tagged with 'infra'">infra</a>
-</span>
-
-                    </span>
-                    
-                
-                
-            
-            
-        </footer>
-    </article>
-    
-    
-
-<nav class="gblog-paging flex flex-even align-center" role="navigation">
-    <div class="gblog-paging__item gblog-paging__item--prev">
-    
-    </div>
-    <div class="gblog-paging__state">Page 1 of 1</div>
-    <div class="gblog-paging__item gblog-paging__item--next">
-    
-    </div>
-</nav>
-
 
         </main>
 
