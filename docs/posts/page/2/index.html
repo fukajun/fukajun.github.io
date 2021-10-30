@@ -5,29 +5,29 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="infra" />
+<meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.fukajun.com/tags/infra/" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="infra"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content=""/>
 
 
 
-    <link rel="canonical" href="https://blog.fukajun.com/tags/infra/">
+    <link rel="canonical" href="https://blog.fukajun.com/posts/">
 
     <title>
       
-        infra | fukajun x blog
+        Posts | fukajun x blog
       
     </title>
 
     <link href='/css/style.css' rel="stylesheet">
 
-    <link rel="alternate" type="application/rss&#43;xml" href="https://blog.fukajun.com/tags/infra/index.xml">
+    <link rel="alternate" type="application/rss&#43;xml" href="https://blog.fukajun.com/posts/index.xml">
     
 <script type="application/javascript">
 var doNotTrack = false;
@@ -89,7 +89,7 @@ if (!doNotTrack) {
         <article class="blog-post">
     <header>
         <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a>
+    <a class="text-dark text-decoration-none" href="/posts/rails-development-problems/">Railsでハマルやつ</a>
 </h1>
 
         
@@ -97,7 +97,7 @@ if (!doNotTrack) {
 
 <div class="blog-post-date text-secondary">
     
-        <time datetime="2021-09-27">2021-09-27</time>
+        <time datetime="2021-07-19">2021-07-19</time>
     
     
         by <span rel="author">fukajun</span>
@@ -108,7 +108,7 @@ if (!doNotTrack) {
 <div class="blog-post-tags text-secondary">
     <strong>Tags:</strong>
     
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
     
 </div>
 
@@ -116,100 +116,10 @@ if (!doNotTrack) {
         
 
     </header>
-    find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d lsof ロックされているファイルとプロセスを表示する lsof / | sort -k7 -nr | head -5
-    
-</article>
-
-    
-
-
-
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        <time datetime="2021-09-26">2021-09-26</time>
-    
-    
-        by <span rel="author">fukajun</span>
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
-    
-</div>
-
-
-        
-
-    </header>
-    概要 envoyを経由してhttpリクエストを、APPサーバーに送るときのヘッダー情報を追加/変更をしてみる やったこと route_config.request_headers_to_add を利用する。headerに key value を指定する。 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、append: true だと httpの値が来た場
+    secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定 症状 Railsをpr
     
     <p></p>
-    <a href="/posts/change-request-header-in-envoy/">Read More →</a>
-    
-</article>
-
-    
-
-
-
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/cloud-watch-metircs-alarm-use-diff/">CloudWatch Metrics で変化量をアラームにする</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        <time datetime="2021-08-05">2021-08-05</time>
-    
-    
-        by <span rel="author">fukajun</span>
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
-    
-</div>
-
-
-        
-<div class="blog-post-categories text-secondary">
-    <strong>Categories:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/categories/infra">infra</a>
-    
-        <a class="btn btn-primary btn-small badge" href="/categories/aws">aws</a>
-    
-</div>
-
-
-    </header>
-    概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時
-    
-    <p></p>
-    <a href="/posts/cloud-watch-metircs-alarm-use-diff/">Read More →</a>
+    <a href="/posts/rails-development-problems/">Read More →</a>
     
 </article>
 
@@ -301,7 +211,98 @@ if (!doNotTrack) {
 
 
 
+    
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/rails-on-lambda/">Rails on Lambda</a>
+</h1>
 
+        
+
+
+<div class="blog-post-date text-secondary">
+    
+        <time datetime="2021-06-22">2021-06-22</time>
+    
+    
+        by <span rel="author">fukajun</span>
+    
+</div>
+
+        
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
+    
+</div>
+
+
+        
+
+    </header>
+    Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby
+    
+    <p></p>
+    <a href="/posts/rails-on-lambda/">Read More →</a>
+    
+</article>
+
+    
+
+
+
+
+
+<nav class="blog-pagination">
+    <ul class="pagination justify-content-center">
+        
+        <li class="page-item">
+            <a class="page-link" href="/posts/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        
+        <li class="page-item ">
+            <a class="page-link" href="/posts/" aria-label="Previous" ><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        
+        
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item ">
+                    <a class="page-link" href="/posts/">1</a>
+                </li>
+            
+        
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item active">
+                    <a class="page-link" href="/posts/page/2/">2</a>
+                </li>
+            
+        
+        <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Next" ><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        
+            <li class="page-item">
+                <a class="page-link" href="/posts/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+            </li>
+        
+    </ul>
+</nav>
 
 
 

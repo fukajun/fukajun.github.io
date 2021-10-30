@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on fukajun blog</title>
+    <title>Posts on fukajun x blog</title>
     <link>https://blog.fukajun.com/posts/</link>
-    <description>Recent content in Posts on fukajun blog</description>
+    <description>Recent content in Posts on fukajun x blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
     <lastBuildDate>Mon, 27 Sep 2021 11:20:19 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shell Commands Cheet Sheet</title>
@@ -12,7 +13,7 @@
       <pubDate>Mon, 27 Sep 2021 11:20:19 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</guid>
-      <description>find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d</description>
+      <description>find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d lsof ロックされているファイルとプロセスを表示する lsof / | sort -k7 -nr | head -5</description>
     </item>
     
     <item>
@@ -57,7 +58,7 @@
       <pubDate>Mon, 19 Jul 2021 03:50:43 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/rails-development-problems/</guid>
-      <description>Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定</description>
+      <description>secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定 症状 Railsをpr</description>
     </item>
     
     <item>
