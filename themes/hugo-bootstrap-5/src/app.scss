@@ -1,0 +1,38 @@
+@import "bootstrap_variables";
+@import "bootstrap/scss/bootstrap";
+
+header h1 {
+  @extend .h1;
+}
+
+.blog-post {
+  li,ol,p {
+    > code {
+      padding: 0.1rem;
+      border-radius: 4px;
+      background-color: $gray-200;
+    }
+  }
+  pre {
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  h2 {
+    @extend .h2;
+    margin-top: 2.0rem;
+    margin-bottom: 2.0rem;
+    border-bottom: 1px $gray-400 solid;
+    padding-bottom: 0.5rem;
+  }
+  h3 {
+    @extend .h3;
+    font-size: calc(0.8rem + 0.6vw);
+    margin-top: 2.0rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  h4 {
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+  }
+}

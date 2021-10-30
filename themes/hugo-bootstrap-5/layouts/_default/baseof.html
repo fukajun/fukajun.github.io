@@ -11,8 +11,6 @@
       {{ end }}
     </title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href='{{ "css/style.css" | relURL }}' rel="stylesheet">
 
     {{ range .AlternativeOutputFormats -}}
@@ -22,6 +20,7 @@
     {{ template "_internal/google_analytics_async.html" . }}
 
     {{ partial "head-custom.html" . }}
+    <script src='{{ "main.js" | relURL }}'></script>
   </head>
   <body>
     {{ block "header" . }}
@@ -31,7 +30,7 @@
     {{ block "body" . }}
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-8 blog-main">
+        <div class="col-12 col-lg-9 blog-main">
 
           {{ block "main" . }}
           {{ end }}
