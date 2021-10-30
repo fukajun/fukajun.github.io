@@ -1,48 +1,89 @@
-baseURL = "https://blog.fukajun.com"
-title = "fukajun blog"
-theme = "hugo-geekblog"
-publishDir = "docs"
+baseurl = "https://blog.fukajun.com"
+title = "fukajun x blog"
+languageCode = "ja-jp"
+defaultContentLanguage = "ja"
 hasCJKLanguage = true
 summaryLength = 140
-googleAnalytics = "G-VBCRGHWQ32"
-
 pluralizeListTitles = false
+contentDir = "content"
+googleAnalytics = "G-VBCRGHWQ32"
+publishDir = "docs"
 
-# Geekblog required configuration
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-disablePathToLower = true
 
-# Needed for mermaid shortcodes
-[markup]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 9
+# Pagination
+paginate = 5
+paginatePath = "page"
+
+# Theme to use
+theme = "hugo-bootstrap-5"
 
 [taxonomies]
-  author = "authors"
   tag = "tags"
+  category = "categories"
 
-[mediaTypes]
-  [mediaTypes."application/atom+xml"]
-    suffixes = ["xml"]
+[languages.ja]
+  languageName = "Japanese"
 
-[outputFormats]
-  [outputFormats.Atom]
-    name = "Atom"
-    mediaType = "application/atom+xml"
-    baseName = "atom"
-    isPlainText = false
-    rel = "alternate"
-    isHTML = false
-    noUgly = true
-    permalinkable = false
+  # Replace the default footer message with a localized message
+  copyright = ""
 
-[outputFormats.outputs]
-  home = ["HTML", "ATOM"]
-  page = ["HTML"]
-  section = ["HTML"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "ATOM"]
+  #[[languages.ja.menu.main]]
+  #  url = "/posts"
+  #  name = "Home"
+  #  weight = 1
+  #[[languages.ja.menu.main]]
+  #  url = "/about/"
+  #  name = "About"
+  #  weight = 2
+  #[[languages.ja.menu.main]]
+  #  url = "/contact/"
+  #  name = "Contact"
+  #  weight = 3
+
+# Links format
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+[params]
+  # Main sections (currently used for the recent posts in the sidebar)
+  mainSections = ["posts"]
+
+  # Default author
+  author = "fukajun"
+
+  # Date format (default: Jan 2, 2006)
+  date_format = "2006-01-02"
+
+  # Display post summaries instead of content in list templates (default: true)
+  truncate = true
+
+  [params.sidebar]
+    # Whether to show the recent posts or not (default: true)
+    showRecent = true
+
+    # Whether to show the taxonomies or not (default: true)
+    # showTaxonomy = false
+
+    # How many posts to show on the sidebar (Default: 5)
+    # num_recent_posts = 10
+
+  [params.header]
+    # Color scheme for the header (default: "light")
+    colorScheme = "dark"
+
+  [params.footer]
+    # Color scheme for the footer (default: "light")
+    # colorScheme = "dark"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "solarized-dark"
+    tabWidth = 4
