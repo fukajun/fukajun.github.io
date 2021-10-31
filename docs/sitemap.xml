@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.fukajun.com/</loc>
-    <lastmod>2021-09-27T11:20:19+09:00</lastmod>
+    <lastmod>2021-10-25T12:27:32+09:00</lastmod>
   </url><url>
-    <loc>https://blog.fukajun.com/tags/infra/</loc>
-    <lastmod>2021-09-27T11:20:19+09:00</lastmod>
+    <loc>https://blog.fukajun.com/posts/make-makefile/</loc>
+    <lastmod>2021-10-25T12:27:32+09:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/</loc>
+    <lastmod>2021-10-25T12:27:32+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/tags/infra/</loc>
     <lastmod>2021-09-27T11:20:19+09:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</loc>

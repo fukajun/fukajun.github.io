@@ -6,7 +6,16 @@
     <description>Recent content in Posts on fukajun x blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 27 Sep 2021 11:20:19 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Makefileで作業タスクを実行する</title>
+      <link>https://blog.fukajun.com/posts/make-makefile/</link>
+      <pubDate>Mon, 25 Oct 2021 12:27:32 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/make-makefile/</guid>
+      <description>はじめに 最近、仕事で複数のレポジトリを扱うことが多く、すこし時間がたってから再び作業を行うことも多い そういうときに、Makefileを使ってみたら便利だったので、簡単にその使い方について紹介する Makefileについて ビルド手順を書くもの あるファイル、拡張子を作るための手順を書い</description>
+    </item>
+    
     <item>
       <title>Shell Commands Cheet Sheet</title>
       <link>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</link>
