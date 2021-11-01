@@ -15,6 +15,14 @@ tags: ["infra"]
   - d : ディレクトリ
   - f : 通常ファイル
 
-```
+```shell
 find ./ -mtime +2 -type d
+```
+
+## lsof
+
+ロックされているファイルとプロセスを表示する
+
+```shell
+lsof / | sort -k7 -nr | head -5
 ```
