@@ -50,7 +50,7 @@ theme = "hugo-bootstrap-5"
   mainSections = ["posts"]
 
   # Default author
-  author = "fukajun"
+  author = ""
 
   # Date format (default: Jan 2, 2006)
   date_format = "2006-01-02"
