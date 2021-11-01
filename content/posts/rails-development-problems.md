@@ -5,9 +5,8 @@ draft: false
 tags: ["backend"]
 ---
 
-# Railsハマルやつ
-
 ## secret_key_base設定漏れで謎のエラー
+
 ### エラー
 
 - `An unhandled lowlevel error occurred. The application logs may have details.`
@@ -33,3 +32,26 @@ tags: ["backend"]
 ただし、本来はpublic/配下のstaticなファイルをrailsに配信させるのはあまりおすすめの設定ではないので、nginx等のwebサーバーやcdnから配信するほうが良い
 
 Rails5以降だと上記の設定だけど、Rails4までだと `config.serve_static_files` という設定項目だった
+
+## Rails serverコマンド強制停止させる
+
+### 症状
+
+- 重たいクエリーや重たい処理をやっていて `rails s` の応答がなくなった。
+- 処理は行っていそうだけど、長時間待たされる可能性がある
+
+
+### 対応
+
+プロセス番号を調べてから `kill` コマンドで停止させるというのが一般的だけど、もう少し簡単に行う方法です。
+一度サスペンドさせてから、バックグランドで動かして、killコマンドで強制停止させると簡単です。
+くれぐれも、`-9` は乱用しないようにしましょう。
+
+```
+# Ctrl + z
+# サスペンドされる
+ % bg
+[1]  + continued  bundle exec rails s
+ % kill -9 %1
+[1]  + killed     bundle exec rails s
+```
