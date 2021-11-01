@@ -116,11 +116,11 @@ if (!doNotTrack) {
 <p><code>route_config.request_headers_to_add</code> を利用する。<code>header</code>に <code>key</code> <code>value</code> を指定する。
 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、<code>append: true</code> だと
 <code>http</code>の値が来た場合に <code>http,https</code> のような変な値になってしまったので <code>append: false</code> を指定している。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">request_headers_to_add</span>:
- - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Port&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;443&#34;</span> }
-   <span style="color:#268bd2">append</span>: <span style="color:#cb4b16">false</span>
- - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Proto&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;https&#34;</span> }
-   <span style="color:#268bd2">append</span>: <span style="color:#cb4b16">false</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">request_headers_to_add:
+ - header: { key: &#34;X-Forwarded-Port&#34;, value: &#34;443&#34; }
+   append: false
+ - header: { key: &#34;X-Forwarded-Proto&#34;, value: &#34;https&#34; }
+   append: false
 </code></pre></div><h3 id="リクエスト情報をヘッダーの値として格納したい">リクエスト情報をヘッダーの値として格納したい</h3>
 <p>formated-stringsを利用する。<a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#config-access-log-format-strings"> コレ </a>
 <code>&quot;%REQ(X-FORWARDED-FOR)%&quot;</code> のような感じでリクエストのメタ情報を値として使うことができる
@@ -132,11 +132,11 @@ appendについては、オプションだがデフォルトだと値の追加�
 </ul>
 <p>などなど<br>
 ちなみに先頭に <code>:</code> がつく、つかないの規則はよくわからない</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">request_headers_to_add</span>:
- - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Port&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;%REQ(X-REAL-FORWARDED-PORT)%&#34;</span> }
-   <span style="color:#268bd2">append</span>: <span style="color:#cb4b16">false</span>
- - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Proto&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;%REQ(X-REAL-FORWARDED-PROTO)%&#34;</span> }
-   <span style="color:#268bd2">append</span>: <span style="color:#cb4b16">false</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">request_headers_to_add:
+ - header: { key: &#34;X-Forwarded-Port&#34;, value: &#34;%REQ(X-REAL-FORWARDED-PORT)%&#34; }
+   append: false
+ - header: { key: &#34;X-Forwarded-Proto&#34;, value: &#34;%REQ(X-REAL-FORWARDED-PROTO)%&#34; }
+   append: false
 </code></pre></div><h2 id="参考情報">参考情報</h2>
 <ul>
 <li><a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto#http-route-components">HTTP route components — envoy 1.20.0-dev-755e28 documentation</a></li>

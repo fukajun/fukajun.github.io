@@ -117,12 +117,13 @@ if (!doNotTrack) {
 </ul>
 <h2 id="何が便利なのか">何が便利なのか？</h2>
 <ul>
-<li>Linux,Unix,OSXあたりなら動かないことはほとんどない</li>
 <li>現在開発使っているちょっとしたコマンドをまとめておく
 <ul>
 <li>まとめておくことで久しぶりに開発に戻ったときのコンテキストスイッチを減らせる</li>
 </ul>
 </li>
+<li>Linux,Unix,OSXあたりなら動かないことはほとんどない</li>
+<li>Railsで開発していると、Rakefileは使っているけどMakefileは空いている事が多い</li>
 <li>任意のタスクも実行できる⭐</li>
 </ul>
 <h2 id="任意のタスクも実行できる">任意のタスクも実行できる⭐</h2>
@@ -131,7 +132,7 @@ if (!doNotTrack) {
 <p>まずは簡単なサンプルから<br>
 ファイル名: <code>Makefile</code></p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile"><span style="color:#268bd2">VALUE1</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#39;world&#39;</span>
-.PHONY deploy build
+<span style="color:#268bd2">.PHONY</span><span style="color:#719e07">:</span> deploy build
 <span style="color:#268bd2">build</span><span style="color:#719e07">:</span>
 	@echo <span style="color:#2aa198">&#39;build hello $(VALUE1)&#39;</span>
 
