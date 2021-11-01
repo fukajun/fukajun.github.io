@@ -14,7 +14,7 @@ envoyを経由してhttpリクエストを、APPサーバーに送るときの�
 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、`append: true` だと
 `http`の値が来た場合に `http,https` のような変な値になってしまったので `append: false` を指定している。
 
-```
+```yaml
 request_headers_to_add:
  - header: { key: "X-Forwarded-Port", value: "443" }
    append: false
@@ -35,7 +35,7 @@ formated-stringsを利用する。[ コレ ](https://www.envoyproxy.io/docs/envo
 などなど  
 ちなみに先頭に `:` がつく、つかないの規則はよくわからない
 
-```
+```yaml
 request_headers_to_add:
  - header: { key: "X-Forwarded-Port", value: "%REQ(X-REAL-FORWARDED-PORT)%" }
    append: false
