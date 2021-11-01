@@ -6,7 +6,16 @@
     <description>Recent content in Posts on fukajun x blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 25 Oct 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Railsとelasticache(memcached)について</title>
+      <link>https://blog.fukajun.com/posts/rails-elasticache-memcached/</link>
+      <pubDate>Fri, 29 Oct 2021 12:27:32 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/rails-elasticache-memcached/</guid>
+      <description>はじめに Railsで、elasticache(memcached)を使ったときに調べたことについて書いてみた Railsでelasticacheを使うには？ dalli-elasticacheがある。4年位更新されてないけど、依存しているgemがdalliだけで、elasticach</description>
+    </item>
+    
     <item>
       <title>Makefileで作業タスクを実行する</title>
       <link>https://blog.fukajun.com/posts/make-makefile/</link>
@@ -67,7 +76,7 @@
       <pubDate>Mon, 19 Jul 2021 03:50:43 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/rails-development-problems/</guid>
-      <description>Railsハマルやつ secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定</description>
+      <description>secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定 症状 Railsをpr</description>
     </item>
     
     <item>
