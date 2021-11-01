@@ -18,9 +18,10 @@ draft: false
 
 ## 何が便利なのか？
 
-- Linux,Unix,OSXあたりなら動かないことはほとんどない
 - 現在開発使っているちょっとしたコマンドをまとめておく
   - まとめておくことで久しぶりに開発に戻ったときのコンテキストスイッチを減らせる
+- Linux,Unix,OSXあたりなら動かないことはほとんどない
+- Railsで開発していると、Rakefileは使っているけどMakefileは空いている事が多い
 - 任意のタスクも実行できる⭐
 
 ## 任意のタスクも実行できる⭐
@@ -34,7 +35,7 @@ draft: false
 
 ```Makefile
 VALUE1='world'
-.PHONY deploy build
+.PHONY: deploy build
 build:
 	@echo 'build hello $(VALUE1)'
 
