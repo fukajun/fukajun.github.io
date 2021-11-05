@@ -31,7 +31,7 @@
       <pubDate>Mon, 19 Jul 2021 03:50:43 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/rails-development-problems/</guid>
-      <description>secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値が設定されているかを確認する 値は、bundle exec rake secret で作ることができる。 生成された値を設定ファイル等に設定しておく assetsの配信設定 症状 Railsをpr</description>
+      <description>&amp;amp;nbsp;を使いたい 何をしたいか？ Railsでhtmlの特殊文字である&amp;amp;nbspを使いたい。 対策 String#html_safe もしくは、raw ヘルパーを利用する。 &amp;quot;&amp;amp;nbsp;&amp;quot;.html_safe raw(&amp;quot;&amp;amp;nbsp;&amp;quot;) secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値</description>
     </item>
     
     <item>
