@@ -1,6 +1,7 @@
 ---
 title: "Makefileで作業タスクを実行する"
 date: 2021-10-25T12:27:32+09:00
+lastmod: 2021-11-04
 draft: false
 ---
 
