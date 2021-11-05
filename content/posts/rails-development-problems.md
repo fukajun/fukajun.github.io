@@ -1,9 +1,22 @@
 ---
 title: "Railsでハマルやつ"
 date: 2021-07-19T03:50:43+09:00
+lastMod: 2021-11-04
 draft: false
 tags: ["backend"]
 ---
+
+## `&nbsp;`を使いたい
+
+### 何をしたいか？
+
+Railsでhtmlの特殊文字である`&nbsp`を使いたい。
+
+### 対策
+
+`String#html_safe` もしくは、`raw` ヘルパーを利用する。
+
+`"&nbsp;".html_safe` `raw("&nbsp;"`)
 
 ## secret_key_base設定漏れで謎のエラー
 
