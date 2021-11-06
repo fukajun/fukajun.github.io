@@ -3,7 +3,10 @@
 {{ $author := .Params.author | default .Site.Params.author }}
 <div class="blog-post-date text-secondary">
     {{ if not .Date.IsZero }}
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+        Created at: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+    {{ end }}
+    {{ if .Lastmod }}
+        Updated at: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format $dateFormat }}</time>
     {{ end }}
     {{ if $author }}
         {{ i18n "by" }} <span rel="author">{{ $author }}</span>
