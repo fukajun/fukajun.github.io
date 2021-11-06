@@ -3,7 +3,6 @@ title: "CloudWatch Metrics で変化量をアラームにする"
 date: 2021-08-05T21:11:47+09:00
 draft: false
 tags: ["infra"]
-categories: ["infra", "aws"]
 ---
 
 ## 概要
