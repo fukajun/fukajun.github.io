@@ -38,16 +38,7 @@
     <loc>https://blog.fukajun.com/tags/tools/</loc>
     <lastmod>2021-08-15T14:19:27+09:00</lastmod>
   </url><url>
-    <loc>https://blog.fukajun.com/categories/aws/</loc>
-    <lastmod>2021-08-05T21:11:47+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/categories/</loc>
-    <lastmod>2021-08-05T21:11:47+09:00</lastmod>
-  </url><url>
     <loc>https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/</loc>
-    <lastmod>2021-08-05T21:11:47+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/categories/infra/</loc>
     <lastmod>2021-08-05T21:11:47+09:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/rails-development-problems/</loc>
@@ -61,5 +52,7 @@
   </url><url>
     <loc>https://blog.fukajun.com/posts/rails-on-lambda/</loc>
     <lastmod>2021-06-23T01:48:02+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/categories/</loc>
   </url>
 </urlset>
