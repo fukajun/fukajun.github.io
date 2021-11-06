@@ -1,5 +1,5 @@
 baseurl = "https://blog.fukajun.com"
-title = "fukajun's Blog"
+title = "fukajun's blog"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
