@@ -10,7 +10,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.fukajun.com/posts/rails-elasticache-memcached/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-29T12:27:32&#43;09:00" />
-<meta property="article:modified_time" content="2021-11-02T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-11-07T00:00:00&#43;00:00" />
 
 
 <meta name="twitter:card" content="summary"/>
@@ -92,7 +92,7 @@ if (!doNotTrack) {
         Created at: <time datetime="2021-10-29">2021-10-29</time>
     
     
-        Updated at: <time datetime="2021-11-02">2021-11-02</time>
+        Updated at: <time datetime="2021-11-07">2021-11-07</time>
     
     
 </div>
@@ -162,7 +162,19 @@ dalliを経由せずにtelnetなどで直接値を取得する場合は、全サ
         server <span style="color:#719e07">=</span> @servers<span style="color:#719e07">.</span>first
         <span style="color:#719e07">return</span> server <span style="color:#719e07">if</span> server<span style="color:#719e07">&amp;.</span>alive?
       <span style="color:#719e07">end</span>
-</code></pre></div><h2 id="まとめ">まとめ</h2>
+</code></pre></div><h2 id="memcachedの各ノードからキー一覧を取得するには">memcachedの各ノードからキー一覧を取得するには？</h2>
+<p>slabの番号をまず取得した上で、<code>stats cachedump</code>でslabごとにキーを取得する必要がある。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b58900">export</span> <span style="color:#268bd2">LIMIT</span><span style="color:#719e07">=</span><span style="color:#2aa198">0</span>
+<span style="color:#b58900">export</span> <span style="color:#268bd2">MEMCACHED_HOST</span><span style="color:#719e07">=</span>memcache.apne1.cache.amazonaws.com
+
+<span style="color:#b58900">echo</span> <span style="color:#2aa198">&#39;stats slabs&#39;</span> | nc <span style="color:#268bd2">$MEMCACHED_HOST</span> <span style="color:#2aa198">11211</span>  | grep <span style="color:#2aa198">&#39;:&#39;</span> | awk -F <span style="color:#2aa198">&#39;[ :]&#39;</span> <span style="color:#2aa198">&#39;{ print $2 }&#39;</span> | sort -u<span style="color:#cb4b16">\
+</span><span style="color:#cb4b16"></span>  | xargs -n <span style="color:#2aa198">1</span> -I <span style="color:#2aa198">&#39;{}&#39;</span> bash -c <span style="color:#2aa198">&#39;echo &#34;stats cachedump {} $LIMIT&#34; | nc  $MEMCACHED_HOST 11211&#39;</span>
+</code></pre></div><p>各コマンドの説明は下記</p>
+<ul>
+<li><code>stats slabs</code> : memcachdの記憶領域であるslabsの統計を表示するコマンド、このコマンドを使用してノードに存在する全slabの番号を取得している</li>
+<li><code>stats cachedump</code> : slabに所属するキーの一覧を表示するコマンド、引数にslabの番号と取得数を指定する、<code>0</code>を指定した場合はすべて出力される</li>
+</ul>
+<h2 id="まとめ">まとめ</h2>
 <p>というわけで、Railsでelasticache(memcached)を使ったときのことを書いてみた。
 そもそもelasticacheのクラスターについて知らなくて、格納されているキーを探すのも一苦労だった。まずは敵を知ることの大切さがわかった。</p>
 
