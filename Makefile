@@ -5,8 +5,8 @@ build:
 	hugo
 
 commit:
-	git add content docs
-	git commit -m "Update about `git status | grep content | head -1`"
+	git add docs
+	git commit -m "Update docs"
 
 push:
 	git push origin master
