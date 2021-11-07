@@ -1,7 +1,7 @@
 ---
 title: "Railsとelasticache(memcached)について"
 date: 2021-10-29T12:27:32+09:00
-lastmod: 2021-11-02
+lastmod: 2021-11-07
 draft: false
 tags: ["infra", "backend"]
 ---
@@ -74,6 +74,24 @@ dalli gem自体で、複数のmemcachedを扱うことが出来るようにな�
         return server if server&.alive?
       end
 ```
+
+## memcachedの各ノードからキー一覧を取得するには？
+
+
+slabの番号をまず取得した上で、`stats cachedump`でslabごとにキーを取得する必要がある。
+
+```shell
+export LIMIT=0
+export MEMCACHED_HOST=memcache.apne1.cache.amazonaws.com
+
+echo 'stats slabs' | nc $MEMCACHED_HOST 11211  | grep ':' | awk -F '[ :]' '{ print $2 }' | sort -u\
+  | xargs -n 1 -I '{}' bash -c 'echo "stats cachedump {} $LIMIT" | nc  $MEMCACHED_HOST 11211'
+```
+
+各コマンドの説明は下記
+- `stats slabs` : memcachdの記憶領域であるslabsの統計を表示するコマンド、このコマンドを使用してノードに存在する全slabの番号を取得している
+- `stats cachedump` : slabに所属するキーの一覧を表示するコマンド、引数にslabの番号と取得数を指定する、`0`を指定した場合はすべて出力される
+
 
 ## まとめ
 
