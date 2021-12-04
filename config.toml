@@ -9,7 +9,6 @@ contentDir = "content"
 googleAnalytics = "G-VBCRGHWQ32"
 publishDir = "docs"
 
-
 # Pagination
 paginate = 5
 paginatePath = "page"
@@ -87,3 +86,7 @@ theme = "hugo-bootstrap-5"
     noClasses = true
     style = "solarized-dark"
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
