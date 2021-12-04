@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.fukajun.com/tags/backend/</loc>
-    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.fukajun.com/</loc>
+    <lastmod>2021-12-04T00:10:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/tags/others/</loc>
+    <lastmod>2021-12-04T00:10:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/posts/</loc>
+    <lastmod>2021-12-04T00:10:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/tags/</loc>
+    <lastmod>2021-12-04T00:10:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/posts/when-thinking-of-a-solution/</loc>
+    <lastmod>2021-12-04T00:10:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/tags/backend/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/tags/infra/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.fukajun.com/posts/</loc>
-    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://blog.fukajun.com/posts/rails-elasticache-memcached/</loc>
-    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/tags/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/make-makefile/</loc>

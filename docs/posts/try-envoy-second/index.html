@@ -115,14 +115,14 @@ if (!doNotTrack) {
 <p>Envoyを触っていくにあたって、公式のチュートリアル<a href="https://www.envoyproxy.io/try/">try-envoy</a>をやってみたきのメモ<br>
 今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について</p>
 <h2 id="detecting-unavailable-services-using-health-checks-and-outlier-detection">Detecting Unavailable Services Using health checks and outlier detection</h2>
-<p>各接続先へのヘルスチェックを行う方法について説明してくれている。
-clustersにhealth_checksを追加し、特定のヘルスチェックエンドポイントを指定してヘルスチェックを行う設定を行った。
+<p>各接続先へのヘルスチェックを行う方法について説明してくれている。<br>
+clustersにhealth_checksを追加し、特定のヘルスチェックエンドポイントを指定してヘルスチェックを行う設定を行った。<br>
 <code>health_checks</code> と <code>common_lb_config</code> 配下あたりがポイント</p>
-<p>チュートリアルどおりにhealth_checksのみを設定すると、エラーを返す
+<p>チュートリアルどおりにhealth_checksのみを設定すると、エラーを返す<br>
 アップストリームに対しても変わらず、振り分けられてしまいうまく動作しなかった</p>
-<p>いろいろ調べて、 <code>healthy_panic_threshold</code> をデフォルトの設定から変更しないと
-状況によっては、エラーを返すサーバーにも振り分けられてしまうということがわかり
-設定を変更した。
+<p>いろいろ調べて、 <code>healthy_panic_threshold</code> をデフォルトの設定から変更しないと<br>
+状況によっては、エラーを返すサーバーにも振り分けられてしまうということがわかり<br>
+設定を変更した。<br>
 今回は、シンプルな動作にしたかったため <code>clusters.common_lb_config.healthy_panic_threshold</code> の設定を <code>0</code> に変更した</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">static_resources</span>:
   <span style="color:#268bd2">listeners</span>:
@@ -193,17 +193,17 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
 <p>公式に説明があった。<a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/panic_threshold#arch-overview-load-balancing-panic-threshold">Panic threshold</a></p>
 <p>ヘルスチェックに成功するhostの数がどれくらいのパーセンテージを下回るとパニックモードに移行するかを<br>
 決めるしきい値。デフォルト設定だと、50%となっている。<br>
-例えば4台中2台までヘルスチェックに成功しているhostの割合は50%で、
+例えば4台中2台までヘルスチェックに成功しているhostの割合は50%で、<br>
 パニックモードに移行せず、残りの健康な2台にリクエストを振り分ける<br>
-さらに障害が進み1台のhostのみが健康な状態になるとヘルスチェックに成功しているhostの割合が25%になり
+さらに障害が進み1台のhostのみが健康な状態になるとヘルスチェックに成功しているhostの割合が25%になり<br>
 しきい値を下回ることになりパニックモードへ移行する<br>
-<code>healthy_panic_threshold</code> を0に設定することでパニックモードを無効にすることができる
-この場合は、健康な台数が何台でもヘルスチェックに成功したhostにのみトラフィックを流し、
+<code>healthy_panic_threshold</code> を0に設定することでパニックモードを無効にすることができる<br>
+この場合は、健康な台数が何台でもヘルスチェックに成功したhostにのみトラフィックを流し、<br>
 健康なhostが存在しない場合は、envoy自身が503を返すようになる</p>
 <h3 id="パニックモードとは">パニックモードとは？</h3>
 <p>いくつかのhostのヘルスチェックが失敗ししきい値を下回った状態<br>
 パニックモードに移行するとデフォルトではヘルスチェックに失敗しているhostも含め<br>
-全てのhostにリクエストを流し始める
+全てのhostにリクエストを流し始める<br>
 この動作は、<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/cluster/v3/cluster.proto#config-cluster-v3-cluster-commonlbconfig-zoneawarelbconfig">設定</a>で、パニックモード時に</p>
 <ul>
 <li>全てのhostにリクエストを流す(デフォルト)</li>
@@ -213,10 +213,10 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
 <h4 id="endpointsが複数あり優先度が設定してある場合の動作">endpointsが複数あり優先度が設定してある場合の動作</h4>
 <p><code>lb_endpoints</code> が2つあり <code>priority</code>が0と1が設定されている下記のような設定のとき<br>
 それぞれの<code>lb_endpoints</code>のグループを、p=0とp=1と呼ぶことにする</p>
-<p>p=1全部のhostが健康な状態では、p=0だけにリクエストが送られる。そこからp=0で障害が起き
+<p>p=1全部のhostが健康な状態では、p=0だけにリクエストが送られる。そこからp=0で障害が起き<br>
 ヘルスチェックに失敗した台数を補うように、p=1にリクエストが送られるようになる<br>
-トータルでp=0の100%相当のリクエストを受けれる台数が生きている場合はパニックモードには
-移行しない。100%未満になる場合は、各グループごとにしきい値(<code>healthy_panic_threshold</code>)を
+トータルでp=0の100%相当のリクエストを受けれる台数が生きている場合はパニックモードには<br>
+移行しない。100%未満になる場合は、各グループごとにしきい値(<code>healthy_panic_threshold</code>)を<br>
 下回っていないかがチェックされ、それぞれのグループ毎に条件に当てはまる場合はパニックモードが適用される</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    <span style="color:#268bd2">load_assignment</span>:
       <span style="color:#268bd2">cluster_name</span>: nodes
@@ -241,9 +241,9 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
 <p><code>If P=1 becomes unhealthy, panic threshold continues to be disregarded until the sum of the health P=0 + P=1 goes below 100%. At this point Envoy starts checking panic threshold value for each priority.</code></p>
 <p>P=1が不調になった場合、P=0+P=1の不調の合計が100%以下になるまで、パニック閾値は無視され続けます。この時点で、Envoyは各プライオリティのパニック閾値のチェックを開始します。</p>
 <h2 id="感想">感想</h2>
-<p>シンプルにヘルスチェックに失敗したホストに送られなくするだけだろうと思っていたが
-意外にヘルスチェックが失敗したときのリクエストの流し方にもいろいろ方針があることが
-わかった。頭の片隅に入れておくと、何かのタイミングで活かせそうな内容だったというか
+<p>シンプルにヘルスチェックに失敗したホストに送られなくするだけだろうと思っていたが<br>
+意外にヘルスチェックが失敗したときのリクエストの流し方にもいろいろ方針があることが<br>
+わかった。頭の片隅に入れておくと、何かのタイミングで活かせそうな内容だったというか<br>
 かなりシナリオの内容からはずれたところまできてしまった&hellip;.</p>
 
 
@@ -277,6 +277,10 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -290,10 +294,6 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -313,6 +313,8 @@ clustersにhealth_checksを追加し、特定のヘルスチェックエンド�
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

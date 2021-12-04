@@ -6,7 +6,16 @@
     <description>Recent content in Posts on fukajun&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 29 Oct 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Dec 2021 00:10:00 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>設計・進め方を考えるとき</title>
+      <link>https://blog.fukajun.com/posts/when-thinking-of-a-solution/</link>
+      <pubDate>Sat, 04 Dec 2021 00:10:00 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/when-thinking-of-a-solution/</guid>
+      <description>はじめに 設計や、手順を考えるときに気をつけたいこと気をつけていることについて 簡単に書いてみる。 気をつけたいことはなにか？ パッと思いつく範囲であげてみる 本当に必要なのかを考える 何よりも問題を解決する 問題を正しく理解する 複数の案を出す、選定する 少し先の未来について考える 以下、それぞれ</description>
+    </item>
+    
     <item>
       <title>Railsとelasticache(memcached)について</title>
       <link>https://blog.fukajun.com/posts/rails-elasticache-memcached/</link>

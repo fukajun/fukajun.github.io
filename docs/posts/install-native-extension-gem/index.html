@@ -125,7 +125,7 @@ if (!doNotTrack) {
 </ul>
 <h2 id="やること">やること</h2>
 <h3 id="gem-installを利用する">gem installを利用する</h3>
-<p>bundle installで試行錯誤していると時間がかかるので、gem install + バージョンを
+<p>bundle installで試行錯誤していると時間がかかるので、gem install + バージョンを<br>
 使って試すほうがシンプルで早い</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">gem install xxx -v &#39;バージョン&#39;
 </code></pre></div><h3 id="オプションを指定する">オプションを指定する</h3>
@@ -136,7 +136,7 @@ if (!doNotTrack) {
 <li><code>--with-cppflags</code> : cプリプロセッサに指定するオプションを追加する <code>-I</code> はインクルードファイルを検索するときのパスを追加する</li>
 </ul>
 <h3 id="ディレクトリを確認する">ディレクトリを確認する</h3>
-<p>gemをインストールできなかったときの解決記事は結構転がってるが、環境の違いなどでそのままではうまくいかないことも多い、
+<p>gemをインストールできなかったときの解決記事は結構転がってるが、環境の違いなどでそのままではうまくいかないことも多い、<br>
 そういうときはインストールオプションの値が正しいかを確認する</p>
 <p>インストールオプションに指定しているパスについて</p>
 <ul>
@@ -144,8 +144,8 @@ if (!doNotTrack) {
 <li>存在していたときに、必要なライブラリやファイルが存在しているか？</li>
 </ul>
 <h3 id="エラーログを確認する">エラーログを確認する</h3>
-<p>gem installコマンドを叩いたときに表示されるエラーメッセージを確認する。
-<code>$HOME/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/extensions/x86_64-darwin-18/2.4.0/mysql2-0.5.2/mkmf.log</code> のようなログファイルが出力されているので
+<p>gem installコマンドを叩いたときに表示されるエラーメッセージを確認する。<br>
+<code>$HOME/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/extensions/x86_64-darwin-18/2.4.0/mysql2-0.5.2/mkmf.log</code> のようなログファイルが出力されているので<br>
 なかみをみて、<code>not found</code> みたいなメッセージが表示されていないかを確認する。</p>
 <h2 id="参考情報">参考情報</h2>
 <ul>
@@ -187,6 +187,10 @@ if (!doNotTrack) {
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -200,10 +204,6 @@ if (!doNotTrack) {
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -223,6 +223,8 @@ if (!doNotTrack) {
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

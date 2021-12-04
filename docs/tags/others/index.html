@@ -5,30 +5,29 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Shell Commands Cheet Sheet" />
-<meta property="og:description" content="find 2日以上前に変更のあったディレクトリ -mtime : &#43;2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime &#43;2 -type d lsof ロックされているファイルとプロセスを表示する lsof / | sort -k7 -nr | head -5" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.fukajun.com/posts/shell-commands-cheet-sheet/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-27T11:20:19&#43;09:00" />
-<meta property="article:modified_time" content="2021-09-27T11:20:19&#43;09:00" />
+<meta property="og:title" content="others" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blog.fukajun.com/tags/others/" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Shell Commands Cheet Sheet"/>
-<meta name="twitter:description" content="find 2日以上前に変更のあったディレクトリ -mtime : &#43;2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime &#43;2 -type d lsof ロックされているファイルとプロセスを表示する lsof / | sort -k7 -nr | head -5"/>
+<meta name="twitter:title" content="others"/>
+<meta name="twitter:description" content=""/>
 
 
 
-    <link rel="canonical" href="https://blog.fukajun.com/posts/shell-commands-cheet-sheet/">
+    <link rel="canonical" href="https://blog.fukajun.com/tags/others/">
 
     <title>
       
-        Shell Commands Cheet Sheet | fukajun&#39;s blog
+        others | fukajun&#39;s blog
       
     </title>
 
     <link href='/css/style.css' rel="stylesheet">
 
+    <link rel="alternate" type="application/rss&#43;xml" href="https://blog.fukajun.com/tags/others/index.xml">
     
 <script type="application/javascript">
 var doNotTrack = false;
@@ -79,81 +78,59 @@ if (!doNotTrack) {
 
           
 
-<header>
-    <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a>
-</h1>
+
+
+
+
+
+
 
     
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+</h1>
+
+        
 
 
 <div class="blog-post-date text-secondary">
     
-        Created at: <time datetime="2021-09-27">2021-09-27</time>
+        Created at: <time datetime="2021-12-04">2021-12-04</time>
     
     
-        Updated at: <time datetime="2021-09-27">2021-09-27</time>
+        Updated at: <time datetime="2021-12-04">2021-12-04</time>
     
     
 </div>
 
-    
+        
 <div class="blog-post-tags text-secondary">
     <strong>Tags:</strong>
     
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+        <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
     
 </div>
 
 
+        
+
+    </header>
+    はじめに 設計や、手順を考えるときに気をつけたいこと気をつけていることについて 簡単に書いてみる。 気をつけたいことはなにか？ パッと思いつく範囲であげてみる 本当に必要なのかを考える 何よりも問題を解決する 問題を正しく理解する 複数の案を出す、選定する 少し先の未来について考える 以下、それぞれ
     
-
-    <hr>
-</header>
-<article class="blog-post">
-    <h2 id="find">find</h2>
-<p>2日以上前に変更のあったディレクトリ</p>
-<ul>
-<li>-mtime :
-<ul>
-<li>+2 2日以前の変更</li>
-<li>-2 2日以降の変更</li>
-</ul>
-</li>
-<li>-type
-<ul>
-<li>d : ディレクトリ</li>
-<li>f : 通常ファイル</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find ./ -mtime +2 -type d
-</code></pre></div><h2 id="lsof">lsof</h2>
-<p>ロックされているファイルとプロセスを表示する</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">lsof / | sort -k7 -nr | head -5
-</code></pre></div>
-
+    <p></p>
+    <a href="/posts/when-thinking-of-a-solution/">Read More →</a>
     
-
-    <footer>
-
-
-    <h4>See also</h4>
-    <ul>
-        
-            <li><a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a></li>
-        
-            <li><a href="/posts/cloud-watch-metircs-alarm-use-diff/">CloudWatch Metrics で変化量をアラームにする</a></li>
-        
-            <li><a href="/posts/try-envoy-second/">Try envoy(HealthChecks)</a></li>
-        
-            <li><a href="/posts/try-envoy-first/">Try envoy(GettingStarted/NGINX/HAProxy)</a></li>
-        
-    </ul>
-
-</footer>
-
 </article>
+
+    
+
+
+
+
+
+
 
 
 

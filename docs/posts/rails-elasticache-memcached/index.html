@@ -135,7 +135,7 @@ Ncat: 19 bytes sent, 203 bytes received in 0.01 seconds.
 <h2 id="クラスターにはどのようにキーが格納されているか">クラスターにはどのようにキーが格納されているか？</h2>
 <p>クラスターといっても実際には複数のノードにシャーディングされているだけなので、各ノード間でレプリケーションされているわけではない。<br>
 なのでそれぞれの値は、クラスターに所属するノードに独立して保存されている。<code>どのノードに保存するかはdalliが格納/検索するときのキーからノードを決定している。</code><br>
-dalliを経由せずにtelnetなどで直接値を取得する場合は、全サーバーにキーを問い合わせてみる必要がある。
+dalliを経由せずにtelnetなどで直接値を取得する場合は、全サーバーにキーを問い合わせてみる必要がある。<br>
 これは結構めんどくさいし、代表エンドポイントに問い合わせてもいずれかのノードに聞いてくれるだけなので、キーがあったりなかったりするので注意が必要。</p>
 <h2 id="dalliはどのように格納するノードを決めているか">dalliはどのように格納するノードを決めているか？</h2>
 <p>dalli gem自体で、複数のmemcachedを扱うことが出来るようになっている<br>
@@ -175,7 +175,7 @@ dalliを経由せずにtelnetなどで直接値を取得する場合は、全サ
 <li><code>stats cachedump</code> : slabに所属するキーの一覧を表示するコマンド、引数にslabの番号と取得数を指定する、<code>0</code>を指定した場合はすべて出力される</li>
 </ul>
 <h2 id="まとめ">まとめ</h2>
-<p>というわけで、Railsでelasticache(memcached)を使ったときのことを書いてみた。
+<p>というわけで、Railsでelasticache(memcached)を使ったときのことを書いてみた。<br>
 そもそもelasticacheのクラスターについて知らなくて、格納されているキーを探すのも一苦労だった。まずは敵を知ることの大切さがわかった。</p>
 
 
@@ -217,6 +217,10 @@ dalliを経由せずにtelnetなどで直接値を取得する場合は、全サ
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -230,10 +234,6 @@ dalliを経由せずにtelnetなどで直接値を取得する場合は、全サ
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -253,6 +253,8 @@ dalliを経由せずにtelnetなどで直接値を取得する場合は、全サ
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

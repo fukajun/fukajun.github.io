@@ -114,8 +114,8 @@ if (!doNotTrack) {
     <h2 id="概要">概要</h2>
 <p>envoyを経由してhttpリクエストを、APPサーバーに送るときのヘッダー情報を追加/変更をしてみる</p>
 <h2 id="やったこと">やったこと</h2>
-<p><code>route_config.request_headers_to_add</code> を利用する。<code>header</code>に <code>key</code> <code>value</code> を指定する。
-appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、<code>append: true</code> だと
+<p><code>route_config.request_headers_to_add</code> を利用する。<code>header</code>に <code>key</code> <code>value</code> を指定する。<br>
+appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、<code>append: true</code> だと<br>
 <code>http</code>の値が来た場合に <code>http,https</code> のような変な値になってしまったので <code>append: false</code> を指定している。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">request_headers_to_add</span>:
  - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Port&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;443&#34;</span> }
@@ -123,8 +123,8 @@ appendについては、オプションだがデフォルトだと値の追加�
  - <span style="color:#268bd2">header</span>: { <span style="color:#268bd2">key</span>: <span style="color:#2aa198">&#34;X-Forwarded-Proto&#34;</span><span style="color:#268bd2">, value</span>: <span style="color:#2aa198">&#34;https&#34;</span> }
    <span style="color:#268bd2">append</span>: <span style="color:#cb4b16">false</span>
 </code></pre></div><h3 id="リクエスト情報をヘッダーの値として格納したい">リクエスト情報をヘッダーの値として格納したい</h3>
-<p>formated-stringsを利用する。<a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#config-access-log-format-strings"> コレ </a>
-<code>&quot;%REQ(X-FORWARDED-FOR)%&quot;</code> のような感じでリクエストのメタ情報を値として使うことができる
+<p>formated-stringsを利用する。<a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/observability/access_log/usage#config-access-log-format-strings"> コレ </a><br>
+<code>&quot;%REQ(X-FORWARDED-FOR)%&quot;</code> のような感じでリクエストのメタ情報を値として使うことができる<br>
 例えば&hellip;</p>
 <ul>
 <li><code>%REQ(:METHOD)%</code></li>
@@ -178,6 +178,10 @@ appendについては、オプションだがデフォルトだと値の追加�
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -191,10 +195,6 @@ appendについては、オプションだがデフォルトだと値の追加�
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -214,6 +214,8 @@ appendについては、オプションだがデフォルトだと値の追加�
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

@@ -116,9 +116,9 @@ if (!doNotTrack) {
 <li>cloudwatch metricsで、常に増加するような値をアラームにするやり方について</li>
 </ul>
 <h2 id="やり方">やり方</h2>
-<p>使用したいメトリクスを選択し、数式の追加から <code>DIFF</code> を選択すると
-式1 <code>DIFF(METRICS())</code> が追加される。これを利用すると直前と現在の値の差を出せるようになる。
-ただしこれをアラームにしようとすると <code>アラームの式では、正確に 1 つの時系列を作成する必要があります。</code>
+<p>使用したいメトリクスを選択し、数式の追加から <code>DIFF</code> を選択すると<br>
+式1 <code>DIFF(METRICS())</code> が追加される。これを利用すると直前と現在の値の差を出せるようになる。<br>
+ただしこれをアラームにしようとすると <code>アラームの式では、正確に 1 つの時系列を作成する必要があります。</code><br>
 と注意が表示されてアラームにできない。<br>
 正しくは次のように 明示的に関数に利用するメトリクスのIDを指定する。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">`DIFF(METRICS())`  =&gt; `DIFF(m1)` 
@@ -161,6 +161,10 @@ if (!doNotTrack) {
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -174,10 +178,6 @@ if (!doNotTrack) {
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -197,6 +197,8 @@ if (!doNotTrack) {
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

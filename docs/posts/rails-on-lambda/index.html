@@ -112,8 +112,8 @@ if (!doNotTrack) {
 </header>
 <article class="blog-post">
     <h2 id="rails-on-lambdaとは">Rails on Lambdaとは？</h2>
-<p>AWS Lambda上でRailsが動くぽいので試してみた。
-過去にaws lambda上で動くrailsライクなフレームワーク<a href="https://rubyonjets.com/">jets</a>の存在は知っていたが、Railsがそのまま動くのは知らなかった。
+<p>AWS Lambda上でRailsが動くぽいので試してみた。<br>
+過去にaws lambda上で動くrailsライクなフレームワーク<a href="https://rubyonjets.com/">jets</a>の存在は知っていたが、Railsがそのまま動くのは知らなかった。<br>
 <a href="https://aws.amazon.com/jp/blogs/news/new-for-aws-lambda-container-image-support/">lambdaのコンテナイメージのサポート</a>が関係してそう。</p>
 <h2 id="lamby">lamby</h2>
 <p><a href="https://github.com/customink/lamby">Lamby</a>は、まさにRailsをlambda上で走らせるためツールで、新規Railsプロジェクトの作成、Dockerイメージのビルド、Lambdaへのデプロイ、ApiGatewayの作成など面倒を見てくれる。</p>
@@ -121,7 +121,7 @@ if (!doNotTrack) {
 <p><a href="https://lamby.custominktech.com/docs/quick_start">公式のQuickStart</a>に書いてあるとおりにやるとできた。<br>
 とりあえず実行したコマンドは、下記のとおりだけど詳しくは公式をみるのが良い。</p>
 <h3 id="プロジェクト作成">プロジェクト作成</h3>
-<p>デプロイ等に必要なコマンドが配置されたRailsプロジェクトを作成してくれる。
+<p>デプロイ等に必要なコマンドが配置されたRailsプロジェクトを作成してくれる。<br>
 実行するとプロジェクト名を聞かれるので好きな名前を入力する。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ docker run <span style="color:#cb4b16">\
 </span><span style="color:#cb4b16"></span>  --rm <span style="color:#cb4b16">\
@@ -131,8 +131,8 @@ if (!doNotTrack) {
 </span><span style="color:#cb4b16"></span>  sam init --location <span style="color:#2aa198">&#34;gh:customink/lamby-cookiecutter&#34;</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">project_name [my_awesome_lambda]:
 </code></pre></div><h3 id="セットアップ">セットアップ</h3>
-<p>作られたプロジェクトディレクトリに移動して、下記のコマンドを実行する。
-ここから、AWSに必要な設定が行われれるので
+<p>作られたプロジェクトディレクトリに移動して、下記のコマンドを実行する。<br>
+ここから、AWSに必要な設定が行われれるので<br>
 <code>AWS_ACCESS_KEY_ID</code> <code>AWS_SECRET_ACCESS_KEY</code> <code>AWS_REGION</code> など自分のAWS環境にアクセスできるように環境変数等をせってシておく必要がある。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ cd my_awesome_lambda
 $ ./bin/bootstrap
@@ -143,7 +143,7 @@ $ ./bin/setup
 </ul>
 <h3 id="デプロイ">デプロイ</h3>
 <p>あとは下記のコマンドを実行すれば動くようになる。<br>
-実行するとビルドされたdockerイメージがecrにプッシュされ、API Gateway、IAM、LambdaFunctionがClouformation経由で作成される。
+実行するとビルドされたdockerイメージがecrにプッシュされ、API Gateway、IAM、LambdaFunctionがClouformation経由で作成される。<br>
 そして最後にアクセス可能になったURLが表示される。=&gt; <a href="https://xxxxx.execute-api.ap-northeast-1.amazonaws.com/production">https://xxxxx.execute-api.ap-northeast-1.amazonaws.com/production</a></p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ ./bin/deploy
 </code></pre></div><p>おなじみの画面↓たったこれだけで、動くところまでいけるのは便利だ。</p>
@@ -155,7 +155,7 @@ $ ./bin/setup
 <li>Memoryは、1792MBで設定されていた。しかし実行時の使用は150MB程度だったので、実装内容しだいではあるが、もうすこしサイズを下げて256MB程度でも良さそうだった。</li>
 </ul>
 <h2 id="速度について">速度について</h2>
-<p>気になる速度について、 ChromeのDeveloperツールで確認すると、下記のような感じだった
+<p>気になる速度について、 ChromeのDeveloperツールで確認すると、下記のような感じだった<br>
 <code>rails new</code> したばかりのDBアクセスすらないrootページなのでなんともいえないけど</p>
 <ul>
 <li>初回: 3-4s くらい</li>
@@ -163,7 +163,7 @@ $ ./bin/setup
 </ul>
 <p><a href="https://dev.classmethod.jp/articles/measure-container-image-lambda-coldstart/">クラメソさん記事</a>によると、1000並列同時アクセスした場合でも同様に初回起動のもの(コールドスタートのもの)は遅くなるが、それほど変わらない速度でレスポンスを返せるとのことだった</p>
 <h2 id="まとめ">まとめ</h2>
-<p>正直、これだけだとDBアクセスもない、実用的な処理も入っていない状態
+<p>正直、これだけだとDBアクセスもない、実用的な処理も入っていない状態<br>
 なので、使えるかどうか判断しにくいけど、公式のドキュメントにも書いてある、相性の良さそうなAurora Servelessとも連携させるなどしてみたい。</p>
 <h2 id="参考">参考</h2>
 <ul>
@@ -197,6 +197,10 @@ $ ./bin/setup
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -210,10 +214,6 @@ $ ./bin/setup
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -233,6 +233,8 @@ $ ./bin/setup
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             

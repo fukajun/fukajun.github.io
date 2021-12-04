@@ -127,17 +127,17 @@ if (!doNotTrack) {
 <li>プロキシーのすごいやつ</li>
 </ul>
 <h2 id="envoyのコア機能について">envoyのコア機能について</h2>
-<p>最初の3つくらいのシナリオでは、envoyを構成する4つのコアコンポーネントについて繰り返し
+<p>最初の3つくらいのシナリオでは、envoyを構成する4つのコアコンポーネントについて繰り返し<br>
 説明されていた。<br>
 envoyは次の4つを利用して、nginx、haproxyと同様の機能実現するといった内容だった<br>
 シナリオ内で書かれていたことと、自分の理解を含めて説明する</p>
 <h3 id="listerner">Listerner</h3>
 <p>どのようなリクエストを受け付けるかを定義する。現時点ではTCPベースのもののみサポートしている。<br>
-受け付けたリクエストは次のFiltersに送られる
+受け付けたリクエストは次のFiltersに送られる<br>
 設定ファイル上では、<code>listener</code> と対応する</p>
 <h3 id="filters">Filters</h3>
 <p>データをパイプラインで処理する、送信前にgzipでデータを圧縮するようなフィルターの機能を有効化できる<br>
-それぞれのFilterは次のコンポーネントであるRoutersを持つ
+それぞれのFilterは次のコンポーネントであるRoutersを持つ<br>
 設定ファイル上では、<code>filter_chains</code> <code>filters</code> あたりが対応してる</p>
 <h3 id="routers">Routers</h3>
 <p>Filterで処理したトラフィックを、次のコンポーネントであるClusterを宛先に振り分ける機能<br>
@@ -146,12 +146,12 @@ envoyは次の4つを利用して、nginx、haproxyと同様の機能実現す�
 <p>リクエストの送信先を定義する、また紐づく送信先のヘルスチェック方法などを定義する<br>
 設定ファイル上では、<code>clusters</code> に対応する</p>
 <h2 id="シナリオについて">シナリオについて</h2>
-<p>最初の3つのシナリオの内容と、自分なりに同様の内容を実現するための設定を作ったので
-載せておく。
-シナリオの内容が、過去のバージョンを対象とした内容になっているため、そのまま動かしても
+<p>最初の3つのシナリオの内容と、自分なりに同様の内容を実現するための設定を作ったので<br>
+載せておく。<br>
+シナリオの内容が、過去のバージョンを対象とした内容になっているため、そのまま動かしても<br>
 現行である、1.18.3 あたりでは動作しなかったので注意が必要</p>
 <h3 id="getting-started-with-envoy">Getting Started with Envoy</h3>
-<p>envoyの設定を作成しながら基本的なenvoyの構成要素を説明してくれている。
+<p>envoyの設定を作成しながら基本的なenvoyの構成要素を説明してくれている。<br>
 最終的にenvoy経由で google.comに接続する設定を作った</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#268bd2">static_resources</span>:
   <span style="color:#268bd2">listeners</span>:
@@ -382,8 +382,8 @@ nginxのシナリオとほとんど変わらない、json形式でのログ出�
   <span style="color:#268bd2">address</span>:
     <span style="color:#268bd2">socket_address</span>: { <span style="color:#268bd2">address: 0.0.0.0, port_value</span>: <span style="color:#2aa198">9901</span> }
 </code></pre></div><h2 id="リファレンスの見方">リファレンスの見方</h2>
-<p>ネット上の情報だとv2の情報が多いのでv3の情報を調べたい場合
-それぞれ調べたい設定項目をV3 API Reference でたどっていくと良かった
+<p>ネット上の情報だとv2の情報が多いのでv3の情報を調べたい場合<br>
+それぞれ調べたい設定項目をV3 API Reference でたどっていくと良かった<br>
 なかなかこのやり方にたどりつかず試行錯誤を繰り返した orz</p>
 <ul>
 <li>Listeners: <a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto</a></li>
@@ -419,6 +419,10 @@ nginxのシナリオとほとんど変わらない、json形式でのログ出�
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -432,10 +436,6 @@ nginxのシナリオとほとんど変わらない、json形式でのログ出�
         
         <li>
             <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
         </li>
         
     </ol>
@@ -455,6 +455,8 @@ nginxのシナリオとほとんど変わらない、json形式でのログ出�
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
             
