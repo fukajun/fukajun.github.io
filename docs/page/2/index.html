@@ -90,6 +90,49 @@ if (!doNotTrack) {
         <article class="blog-post">
     <header>
         <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
+</h1>
+
+        
+
+
+<div class="blog-post-date text-secondary">
+    
+        Created at: <time datetime="2021-09-26">2021-09-26</time>
+    
+    
+        Updated at: <time datetime="2021-09-26">2021-09-26</time>
+    
+    
+</div>
+
+        
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+    
+</div>
+
+
+        
+
+    </header>
+    概要 envoyを経由してhttpリクエストを、APPサーバーに送るときのヘッダー情報を追加/変更をしてみる やったこと route_config.request_headers_to_add を利用する。headerに key value を指定する。 appendについては、オプションだがデフォルトだと値の追加になり、下記の例で、append: true だと httpの値が来た場
+    
+    <p></p>
+    <a href="/posts/change-request-header-in-envoy/">Read More →</a>
+    
+</article>
+
+    
+
+
+
+    
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
     <a class="text-dark text-decoration-none" href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
 </h1>
 
@@ -258,49 +301,6 @@ if (!doNotTrack) {
 
 
 
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/try-envoy-second/">Try envoy(HealthChecks)</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        Created at: <time datetime="2021-07-06">2021-07-06</time>
-    
-    
-        Updated at: <time datetime="2021-07-06">2021-07-06</time>
-    
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
-    
-</div>
-
-
-        
-
-    </header>
-    try envoy Envoyを触っていくにあたって、公式のチュートリアルtry-envoyをやってみたきのメモ 今回は「 Detecting Unavailable Services Using health checks and outlier detection」の内容について Detecting Unavailable Services Using health checks and outlier detection 各接続先へのヘルスチェックを行う方法について説明してくれている。 clustersにhealth_checks
-    
-    <p></p>
-    <a href="/posts/try-envoy-second/">Read More →</a>
-    
-</article>
-
-    
-
-
-
 
 
 <nav class="blog-pagination">
@@ -385,6 +385,10 @@ if (!doNotTrack) {
         </li>
         
         <li>
+            <a href="/posts/react-use-state-set-function-to-state/">React Hooksでstateに関数(function)を設定する</a>
+        </li>
+        
+        <li>
             <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
@@ -394,10 +398,6 @@ if (!doNotTrack) {
         
         <li>
             <a href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a>
-        </li>
-        
-        <li>
-            <a href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
         </li>
         
     </ol>
@@ -415,6 +415,8 @@ if (!doNotTrack) {
         <p>
             
             <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/front">front</a>
             
             <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
             

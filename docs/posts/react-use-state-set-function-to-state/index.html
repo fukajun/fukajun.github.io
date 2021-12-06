@@ -5,25 +5,25 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="CloudWatch Metrics で変化量をアラームにする" />
-<meta property="og:description" content="概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時" />
+<meta property="og:title" content="React Hooksでstateに関数(function)を設定する" />
+<meta property="og:description" content="はじめに react hooksを使っているときに、関数を状態として持たせたいというのがあった。 なかなかない状況ではあるが、メモしておく。 stateに関数(function)を設定するには？ setStateには、引数として渡した関数を評価し、結果をstateに割り当てるという動作もある。 なの" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-08-05T21:11:47&#43;09:00" />
-<meta property="article:modified_time" content="2021-08-05T21:11:47&#43;09:00" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/react-use-state-set-function-to-state/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-01T12:27:32&#43;09:00" />
+<meta property="article:modified_time" content="2021-12-01T00:00:00&#43;00:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="CloudWatch Metrics で変化量をアラームにする"/>
-<meta name="twitter:description" content="概要 cloudwatch metricsで、常に増加するような値をアラームにするやり方について やり方 使用したいメトリクスを選択し、数式の追加から DIFF を選択すると 式1 DIFF(METRICS()) が追加される。これを利用すると直前と現在の値の差を出せるようになる。 ただしこれをアラームにしようとすると アラームの式では、正確に 1 つの時"/>
+<meta name="twitter:title" content="React Hooksでstateに関数(function)を設定する"/>
+<meta name="twitter:description" content="はじめに react hooksを使っているときに、関数を状態として持たせたいというのがあった。 なかなかない状況ではあるが、メモしておく。 stateに関数(function)を設定するには？ setStateには、引数として渡した関数を評価し、結果をstateに割り当てるという動作もある。 なの"/>
 
 
 
-    <link rel="canonical" href="https://blog.fukajun.com/posts/cloud-watch-metircs-alarm-use-diff/">
+    <link rel="canonical" href="https://blog.fukajun.com/posts/react-use-state-set-function-to-state/">
 
     <title>
       
-        CloudWatch Metrics で変化量をアラームにする | fukajun&#39;s blog
+        React Hooksでstateに関数(function)を設定する | fukajun&#39;s blog
       
     </title>
 
@@ -81,7 +81,7 @@ if (!doNotTrack) {
 
 <header>
     <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/cloud-watch-metircs-alarm-use-diff/">CloudWatch Metrics で変化量をアラームにする</a>
+    <a class="text-dark text-decoration-none" href="/posts/react-use-state-set-function-to-state/">React Hooksでstateに関数(function)を設定する</a>
 </h1>
 
     
@@ -89,10 +89,10 @@ if (!doNotTrack) {
 
 <div class="blog-post-date text-secondary">
     
-        Created at: <time datetime="2021-08-05">2021-08-05</time>
+        Created at: <time datetime="2021-12-01">2021-12-01</time>
     
     
-        Updated at: <time datetime="2021-08-05">2021-08-05</time>
+        Updated at: <time datetime="2021-12-01">2021-12-01</time>
     
     
 </div>
@@ -101,7 +101,7 @@ if (!doNotTrack) {
 <div class="blog-post-tags text-secondary">
     <strong>Tags:</strong>
     
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+        <a class="btn btn-primary btn-small badge" href="/tags/front">front</a>
     
 </div>
 
@@ -111,21 +111,23 @@ if (!doNotTrack) {
     <hr>
 </header>
 <article class="blog-post">
-    <h2 id="概要">概要</h2>
+    <h2 id="はじめに">はじめに</h2>
+<p>react hooksを使っているときに、関数を状態として持たせたいというのがあった。<br>
+なかなかない状況ではあるが、メモしておく。</p>
+<h2 id="stateに関数functionを設定するには">stateに関数(function)を設定するには？</h2>
+<p>setStateには、引数として渡した関数を評価し、結果をstateに割り当てるという動作もある。<br>
+なので、関数をそのまま渡しただけでは、その関数の評価後の値がstateに割り当てられるだけで目的を達成できない<br>
+単純で、関数を返す関数を渡すだけである。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#268bd2">const</span> [state, setState] <span style="color:#719e07">=</span> useState(()=&gt; {})
+
+setState(()=&gt; { console.log(<span style="color:#2aa198">&#39;invoked setState&#39;</span>) }      # こっちは間違い
+setState(()=&gt; ()=&gt; { console.log(<span style="color:#2aa198">&#39;invoked setState&#39;</span>) } # コチラが正しい
+</code></pre></div><h2 id="まとめ">まとめ</h2>
+<p>リファレンスをちゃんと目を通していると載っているのだけど、探そうと思うと以外に探しにくい情報だった<br>
+公式リファレンスをざっと眺めておくみたいなのはやっぱり重要である。</p>
+<h2 id="参考情報">参考情報</h2>
 <ul>
-<li>cloudwatch metricsで、常に増加するような値をアラームにするやり方について</li>
-</ul>
-<h2 id="やり方">やり方</h2>
-<p>使用したいメトリクスを選択し、数式の追加から <code>DIFF</code> を選択すると<br>
-式1 <code>DIFF(METRICS())</code> が追加される。これを利用すると直前と現在の値の差を出せるようになる。<br>
-ただしこれをアラームにしようとすると <code>アラームの式では、正確に 1 つの時系列を作成する必要があります。</code><br>
-と注意が表示されてアラームにできない。<br>
-正しくは次のように 明示的に関数に利用するメトリクスのIDを指定する。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">`DIFF(METRICS())`  =&gt; `DIFF(m1)` 
-</code></pre></div><h2 id="参考情報">参考情報</h2>
-<ul>
-<li><a href="https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/monitoring/Create-alarm-on-metric-math-expression.html">メトリクスの数式に基づく CloudWatch アラームの作成 - Amazon CloudWatch</a></li>
-<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Using metric math - Amazon CloudWatch</a></li>
+<li><a href="https://ja.reactjs.org/docs/hooks-reference.html#usestate">フック API リファレンス – React</a></li>
 </ul>
 
 
@@ -133,15 +135,6 @@ if (!doNotTrack) {
 
     <footer>
 
-
-    <h4>See also</h4>
-    <ul>
-        
-            <li><a href="/posts/try-envoy-second/">Try envoy(HealthChecks)</a></li>
-        
-            <li><a href="/posts/try-envoy-first/">Try envoy(GettingStarted/NGINX/HAProxy)</a></li>
-        
-    </ul>
 
 </footer>
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>front on fukajun&#39;s blog</title>
+    <link>https://blog.fukajun.com/tags/front/</link>
+    <description>Recent content in front on fukajun&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 01 Dec 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/front/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Hooksでstateに関数(function)を設定する</title>
+      <link>https://blog.fukajun.com/posts/react-use-state-set-function-to-state/</link>
+      <pubDate>Wed, 01 Dec 2021 12:27:32 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/react-use-state-set-function-to-state/</guid>
+      <description>はじめに react hooksを使っているときに、関数を状態として持たせたいというのがあった。 なかなかない状況ではあるが、メモしておく。 stateに関数(function)を設定するには？ setStateには、引数として渡した関数を評価し、結果をstateに割り当てるという動作もある。 なの</description>
+    </item>
+    
+  </channel>
+</rss>
