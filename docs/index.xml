@@ -49,7 +49,7 @@
       <pubDate>Mon, 27 Sep 2021 11:20:19 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/shell-commands-cheet-sheet/</guid>
-      <description>find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の変更 -2 2日以降の変更 -type d : ディレクトリ f : 通常ファイル find ./ -mtime +2 -type d lsof ロックされているファイルとプロセスを表示する lsof / | sort -k7 -nr | head -5</description>
+      <description>du 普通にカレントディレクトリのファイル・ディレクトリのサイズを個々に調べる $ du -hs * ↑のやり方では、隠しファイルを含めてサイズを表示することができない。 隠しファイルも含めて合計サイズを調べたい場合は、下記のようにする。 $ du -hs $(ls -A) find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の</description>
     </item>
     
     <item>
