@@ -17,7 +17,7 @@
     <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
     {{ end -}}
 
-    {{ template "_internal/google_analytics_async.html" . }}
+    {{ partial "analytics" . }}
 
     {{ partial "head-custom.html" . }}
     <script src='{{ "main.js" | relURL }}'></script>
