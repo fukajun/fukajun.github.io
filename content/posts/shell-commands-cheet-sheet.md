@@ -1,9 +1,25 @@
 ---
 title: "Shell Commands Cheet Sheet"
 date: 2021-09-27T11:20:19+09:00
+lastmod: 2021-12-07
 draft: false
 tags: ["infra"]
 ---
+
+## du
+
+普通にカレントディレクトリのファイル・ディレクトリのサイズを個々に調べる
+
+```bash
+$ du -hs *
+```
+
+↑のやり方では、隠しファイルを含めてサイズを表示することができない。
+隠しファイルも含めて合計サイズを調べたい場合は、下記のようにする。
+
+```bash
+$ du -hs $(ls -A)
+```
 
 ## find
 
@@ -15,7 +31,7 @@ tags: ["infra"]
   - d : ディレクトリ
   - f : 通常ファイル
 
-```shell
+```bash
 find ./ -mtime +2 -type d
 ```
 
@@ -23,6 +39,6 @@ find ./ -mtime +2 -type d
 
 ロックされているファイルとプロセスを表示する
 
-```shell
+```bash
 lsof / | sort -k7 -nr | head -5
 ```
