@@ -6,7 +6,16 @@
     <description>Recent content in Tags on fukajun&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 04 Dec 2021 00:10:00 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 14:19:27 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>backend</title>
+      <link>https://blog.fukajun.com/tags/backend/</link>
+      <pubDate>Tue, 19 Apr 2022 14:19:27 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/tags/backend/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>others</title>
       <link>https://blog.fukajun.com/tags/others/</link>
@@ -22,15 +31,6 @@
       <pubDate>Wed, 01 Dec 2021 12:27:32 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/tags/front/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>backend</title>
-      <link>https://blog.fukajun.com/tags/backend/</link>
-      <pubDate>Fri, 29 Oct 2021 12:27:32 +0900</pubDate>
-      
-      <guid>https://blog.fukajun.com/tags/backend/</guid>
       <description></description>
     </item>
     

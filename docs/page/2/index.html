@@ -92,6 +92,49 @@
         <article class="blog-post">
     <header>
         <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a>
+</h1>
+
+        
+
+
+<div class="blog-post-date text-secondary">
+    
+        Created at: <time datetime="2021-09-27">2021-09-27</time>
+    
+    
+        Updated at: <time datetime="2021-12-07">2021-12-07</time>
+    
+    
+</div>
+
+        
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+    
+</div>
+
+
+        
+
+    </header>
+    du 普通にカレントディレクトリのファイル・ディレクトリのサイズを個々に調べる $ du -hs * ↑のやり方では、隠しファイルを含めてサイズを表示することができない。 隠しファイルも含めて合計サイズを調べたい場合は、下記のようにする。 $ du -hs $(ls -A) find 2日以上前に変更のあったディレクトリ -mtime : +2 2日以前の
+    
+    <p></p>
+    <a href="/posts/shell-commands-cheet-sheet/">Read More →</a>
+    
+</article>
+
+    
+
+
+
+    
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
     <a class="text-dark text-decoration-none" href="/posts/change-request-header-in-envoy/">envoyでrequest headerを変更する</a>
 </h1>
 
@@ -260,49 +303,6 @@
 
 
 
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/rails-development-problems/">Railsでハマルやつ</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        Created at: <time datetime="2021-07-19">2021-07-19</time>
-    
-    
-        Updated at: <time datetime="2021-11-04">2021-11-04</time>
-    
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
-    
-</div>
-
-
-        
-
-    </header>
-    &amp;nbsp;を使いたい 何をしたいか？ Railsでhtmlの特殊文字である&amp;nbspを使いたい。 対策 String#html_safe もしくは、raw ヘルパーを利用する。 &quot;&amp;nbsp;&quot;.html_safe raw(&quot;&amp;nbsp;&quot;) secret_key_base設定漏れで謎のエラー エラー An unhandled lowlevel error occurred. The application logs may have details. 対応 secret_key_base が設定されていないことが原因、ちゃんと値
-    
-    <p></p>
-    <a href="/posts/rails-development-problems/">Read More →</a>
-    
-</article>
-
-    
-
-
-
 
 
 <nav class="blog-pagination">
@@ -383,6 +383,10 @@
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/rails-rspec-simple/">Railsでrspecのシンプルな例</a>
+        </li>
+        
+        <li>
             <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
         </li>
         
@@ -396,10 +400,6 @@
         
         <li>
             <a href="/posts/make-makefile/">Makefileで作業タスクを実行する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/shell-commands-cheet-sheet/">Shell Commands Cheet Sheet</a>
         </li>
         
     </ol>

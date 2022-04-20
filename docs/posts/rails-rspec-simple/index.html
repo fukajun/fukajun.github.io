@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Railsでrspecのシンプルな例" />
+<meta property="og:description" content="はじめに Railsでspecを書くときにこういう風に書いてという場合に、シンプルな例が欲しかったので書いてみました。 こんな感じ itのなかはできるだけテストの対象のことだけを書く contextで条件分けをする contextのなかは、その文脈で差分が分かるようにする =&gt; let(:name)... の部分 対象のm" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.fukajun.com/posts/rails-rspec-simple/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-19T14:19:27&#43;09:00" />
+<meta property="article:modified_time" content="2022-04-19T14:19:27&#43;09:00" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Railsでrspecのシンプルな例"/>
+<meta name="twitter:description" content="はじめに Railsでspecを書くときにこういう風に書いてという場合に、シンプルな例が欲しかったので書いてみました。 こんな感じ itのなかはできるだけテストの対象のことだけを書く contextで条件分けをする contextのなかは、その文脈で差分が分かるようにする =&gt; let(:name)... の部分 対象のm"/>
+
+
+
+    <link rel="canonical" href="https://blog.fukajun.com/posts/rails-rspec-simple/">
+
+    <title>
+      
+        Railsでrspecのシンプルな例 | fukajun&#39;s blog
+      
+    </title>
+
+    <link href='/css/style.css' rel="stylesheet">
+
+    
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBCRGHWQ32"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VBCRGHWQ32');
+</script>
+
+
+
+
+    
+    <script src='/main.js'></script>
+  </head>
+  <body>
+    
+      
+
+<header class="blog-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                fukajun&#39;s blog
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-9 blog-main">
+
+          
+
+<header>
+    <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/rails-rspec-simple/">Railsでrspecのシンプルな例</a>
+</h1>
+
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Created at: <time datetime="2022-04-19">2022-04-19</time>
+    
+    
+        Updated at: <time datetime="2022-04-19">2022-04-19</time>
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
+    
+</div>
+
+
+    
+
+    <hr>
+</header>
+<article class="blog-post">
+    <h2 id="はじめに">はじめに</h2>
+<p>Railsでspecを書くときにこういう風に書いてという場合に、シンプルな例が欲しかったので書いてみました。</p>
+<h2 id="こんな感じ">こんな感じ</h2>
+<ul>
+<li>itのなかはできるだけテストの対象のことだけを書く</li>
+<li>contextで条件分けをする</li>
+<li>contextのなかは、その文脈で差分が分かるようにする =&gt; <code>let(:name)...</code> の部分</li>
+</ul>
+<p>対象のmodel</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#719e07">class</span> <span style="color:#268bd2">User</span> <span style="color:#719e07">&lt;</span> <span style="color:#cb4b16">ActiveRecord</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Base</span>
+  validates <span style="color:#2aa198">:name</span>, <span style="color:#b58900">format</span>: { <span style="color:#2aa198">with</span>: <span style="color:#dc322f">/\A[^-][0-9A-Za-z-]+\z/</span>, <span style="color:#2aa198">message</span>: <span style="color:#2aa198">&#34;英数字及びハイフン(-)のみが使えます&#34;</span> }
+<span style="color:#719e07">end</span>
+</code></pre></div><p>上に対するテストコード</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;rails_helper&#39;</span>
+
+<span style="color:#cb4b16">RSpec</span><span style="color:#719e07">.</span>describe <span style="color:#cb4b16">User</span>, <span style="color:#2aa198">type</span>: <span style="color:#2aa198">:model</span> <span style="color:#719e07">do</span>
+  describe <span style="color:#2aa198">&#39;validation about name rule&#39;</span> <span style="color:#719e07">do</span>
+    let!(<span style="color:#2aa198">:user</span>) { <span style="color:#cb4b16">FactoryBot</span><span style="color:#719e07">.</span>build(<span style="color:#2aa198">:user</span>, <span style="color:#b58900">name</span>: <span style="color:#b58900">name</span>) }
+
+    context <span style="color:#2aa198">&#39;valid name&#39;</span> <span style="color:#719e07">do</span>
+      let(<span style="color:#2aa198">:name</span>) { <span style="color:#2aa198">&#39;mario-and-luige&#39;</span> }
+      it <span style="color:#2aa198">&#39;return true&#39;</span> <span style="color:#719e07">do</span>
+        expect(user<span style="color:#719e07">.</span>valid?)<span style="color:#719e07">.</span>to be <span style="color:#719e07">true</span>
+      <span style="color:#719e07">end</span>
+    <span style="color:#719e07">end</span>
+
+    context <span style="color:#2aa198">&#39;start with hiphen&#39;</span> <span style="color:#719e07">do</span>
+      let(<span style="color:#2aa198">:name</span>) { <span style="color:#2aa198">&#39;-invalid-name&#39;</span> }
+      it <span style="color:#2aa198">&#39;return false&#39;</span> <span style="color:#719e07">do</span>
+        expect(user<span style="color:#719e07">.</span>valid?)<span style="color:#719e07">.</span>to be <span style="color:#719e07">false</span>
+      <span style="color:#719e07">end</span>
+    <span style="color:#719e07">end</span>
+
+    context <span style="color:#2aa198">&#39;include under score&#39;</span> <span style="color:#719e07">do</span>
+      let(<span style="color:#2aa198">:name</span>) { <span style="color:#2aa198">&#39;mario_luige&#39;</span> }
+      it <span style="color:#2aa198">&#39;return false&#39;</span> <span style="color:#719e07">do</span>
+        expect(user<span style="color:#719e07">.</span>valid?)<span style="color:#719e07">.</span>to be <span style="color:#719e07">false</span>
+      <span style="color:#719e07">end</span>
+    <span style="color:#719e07">end</span>
+  <span style="color:#719e07">end</span>
+<span style="color:#719e07">end</span>
+</code></pre></div><h2 id="これだけが良い書き方ではない">これだけが良い書き方ではない</h2>
+<p>rspecの書き方は、何をテストしているかわかりやすく書くことは大切ですが、<br>
+それに対してのやり方は割と好みがあるなと感じています。</p>
+<ul>
+<li><a href="https://blog.jnito.com/entry/2021/10/09/105651">僕がRSpecでsubjectを使わない理由 - give IT a try</a></li>
+</ul>
+
+
+    
+
+    <footer>
+
+
+    <h4>See also</h4>
+    <ul>
+        
+            <li><a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a></li>
+        
+            <li><a href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a></li>
+        
+            <li><a href="/posts/rails-development-problems/">Railsでハマルやつ</a></li>
+        
+            <li><a href="/posts/rails-on-lambda/">Rails on Lambda</a></li>
+        
+    </ul>
+
+</footer>
+
+</article>
+
+
+
+        </div>
+
+        <aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    
+        
+
+
+<section>
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/posts/rails-rspec-simple/">Railsでrspecのシンプルな例</a>
+        </li>
+        
+        <li>
+            <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
+        </li>
+        
+        <li>
+            <a href="/posts/react-use-state-set-function-to-state/">React Hooksでstateに関数(function)を設定する</a>
+        </li>
+        
+        <li>
+            <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
+        </li>
+        
+        <li>
+            <a href="/posts/make-makefile/">Makefileで作業タスクを実行する</a>
+        </li>
+        
+    </ol>
+</section>
+
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>Tags</h4>
+        <p>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/front">front</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/others">others</a>
+            
+            <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
+            
+        </p>
+        
+    
+</section>
+
+    
+
+    
+
+</aside>
+
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+        <p class="w-100 text-center">Hugo template made with ❤ by <a href='https://github.com/NotWoods'>Tiger Oakes</a>, inspired by <a href='https://github.com/Xzya/hugo-bootstrap'>hugo-bootstrap</a></p>
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

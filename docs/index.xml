@@ -6,7 +6,16 @@
     <description>Recent content on fukajun&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 04 Dec 2021 00:10:00 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 14:19:27 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Railsでrspecのシンプルな例</title>
+      <link>https://blog.fukajun.com/posts/rails-rspec-simple/</link>
+      <pubDate>Tue, 19 Apr 2022 14:19:27 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/rails-rspec-simple/</guid>
+      <description>はじめに Railsでspecを書くときにこういう風に書いてという場合に、シンプルな例が欲しかったので書いてみました。 こんな感じ itのなかはできるだけテストの対象のことだけを書く contextで条件分けをする contextのなかは、その文脈で差分が分かるようにする =&amp;gt; let(:name)... の部分 対象のm</description>
+    </item>
+    
     <item>
       <title>設計・進め方を考えるとき</title>
       <link>https://blog.fukajun.com/posts/when-thinking-of-a-solution/</link>
