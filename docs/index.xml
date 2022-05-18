@@ -13,7 +13,7 @@
       <pubDate>Wed, 18 May 2022 03:50:43 +0900</pubDate>
       
       <guid>https://blog.fukajun.com/posts/try-rust-note/</guid>
-      <description>Rustをチマチマやるノート strだとスコープを抜けるので、Stringだと返却できるよって書いてあって。 よくわからんかったけど動いた rustの関数で値を返す</description>
+      <description>Rustをチマチマやるノート strとString 関数で文字列を返したいとき、strだとスコープを抜けるので、Stringだと返却できるよって書いてあって。よくわからんかったけど動いた rustの関数で値を返す まったくもってこの2つの違いがわからないので調べたい Rustは文字列を表す</description>
     </item>
     
     <item>
