@@ -35,4 +35,14 @@ header h1 {
     margin-top: 1.0rem;
     margin-bottom: 1.0rem;
   }
+
+  blockquote {
+    @extend .mt-4;
+    @extend .ps-3;
+    @extend .border-start;
+    @extend .border-2;
+    a {
+        @extend .small
+    }
+  }
 }
