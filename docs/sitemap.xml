@@ -8,16 +8,19 @@
     <loc>https://blog.fukajun.com/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://blog.fukajun.com/tags/infra/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.fukajun.com/posts/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.fukajun.com/tags/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/tags/backend/</loc>
     <lastmod>2022-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/mysql-replication-stop/</loc>
-    <lastmod>2022-07-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/tags/</loc>
     <lastmod>2022-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/try-rust-note/</loc>
@@ -37,9 +40,6 @@
   </url><url>
     <loc>https://blog.fukajun.com/posts/react-use-state-set-function-to-state/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://blog.fukajun.com/tags/infra/</loc>
-    <lastmod>2021-12-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.fukajun.com/posts/rails-elasticache-memcached/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>

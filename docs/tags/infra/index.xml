@@ -6,7 +6,16 @@
     <description>Recent content in infra on fukajun&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 29 Oct 2021 12:27:32 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/infra/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 14:46:40 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/tags/infra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BigQueryのパーティションについて調べてみた</title>
+      <link>https://blog.fukajun.com/posts/bigquery-partition/</link>
+      <pubDate>Fri, 15 Jul 2022 14:46:40 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/bigquery-partition/</guid>
+      <description>はじめに BigQueryを使うにあたって、クエリー料金を安く抑えるのに重要と思われる パーティション分割について調べたときのメモ パーティション分割とは? テーブルをパーティションキーに指定した値でパーティションとして分割することができる BigQuery初心者を脱出したい２（パーティシ</description>
+    </item>
+    
     <item>
       <title>Railsとelasticache(memcached)について</title>
       <link>https://blog.fukajun.com/posts/rails-elasticache-memcached/</link>
