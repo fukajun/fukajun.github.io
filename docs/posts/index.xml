@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>MySQLレプリケーションストップ</title>
-      <link>https://blog.fukajun.com/posts/mysql-replication-stop/</link>
-      <pubDate>Mon, 11 Jul 2022 03:50:43 +0900</pubDate>
-      
-      <guid>https://blog.fukajun.com/posts/mysql-replication-stop/</guid>
-      <description>はじめに レプリケーションのエラーを探す RDSの場合は、対象DBインスタンスの「ログとイベント」タブから見ることができる。 show slave status;する error logを確認する サイズが大きい場合は、必要な情報がそのなかに埋もれてしまっている場合もあるので grepなどを適宜利用して絞り込みを行う テ</description>
-    </item>
-    
-    <item>
       <title>Rustチマチマノート</title>
       <link>https://blog.fukajun.com/posts/try-rust-note/</link>
       <pubDate>Wed, 18 May 2022 03:50:43 +0900</pubDate>
