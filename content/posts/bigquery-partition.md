@@ -3,6 +3,7 @@ title: "BigQueryのパーティションについて調べてみた"
 date: 2022-07-15T14:46:40+09:00
 lastmod: 2022-07-15
 draft: false
+tags: ["infra"]
 ---
 
 ## はじめに
