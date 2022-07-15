@@ -91,6 +91,92 @@
         <article class="blog-post">
     <header>
         <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/install-native-extension-gem/">gemのインストールに失敗したときにやること</a>
+</h1>
+
+        
+
+
+<div class="blog-post-date text-secondary">
+    
+        Created at: <time datetime="2021-09-03">2021-09-03</time>
+    
+    
+        Updated at: <time datetime="2021-09-03">2021-09-03</time>
+    
+    
+</div>
+
+        
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
+    
+</div>
+
+
+        
+
+    </header>
+    概要 gemのインストールで失敗のほとんどは、native extensionありのgemじゃないかと思う 今回は mysql2 gem のインストール時のハマったときのことを参考に失敗したときにやることについて書いてみた ちなみに、このままやればできるという内容ではないです インストールできたコマンド まずは
+    
+    <p></p>
+    <a href="/posts/install-native-extension-gem/">Read More →</a>
+    
+</article>
+
+    
+
+
+
+    
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
+    <a class="text-dark text-decoration-none" href="/posts/git-log-name-status/">git logで変更の種別(変更/削除/追加)を表示する</a>
+</h1>
+
+        
+
+
+<div class="blog-post-date text-secondary">
+    
+        Created at: <time datetime="2021-08-15">2021-08-15</time>
+    
+    
+        Updated at: <time datetime="2021-08-15">2021-08-15</time>
+    
+    
+</div>
+
+        
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="btn btn-primary btn-small badge" href="/tags/tools">tools</a>
+    
+</div>
+
+
+        
+
+    </header>
+    概要 ファイル生成コマンドが行った変更を取り消したい。 そのために、gitの履歴で git status ライクにファイル毎の変更種別を方法を調べた。 具体的には、A:追加 M:変更 D:削除のように表示してほしい。 やり方 git log --name-status を使う。 同様に git show --name-status &lt;commit hash&gt; で特定の変更のみをみることもできる 表示例 commit b2931fae2dc118ad34d19fe28f2bb0f6ef2244a6 Author: fukajun &lt;xxxxxx&gt; Date: Sat Sep 22
+    
+    <p></p>
+    <a href="/posts/git-log-name-status/">Read More →</a>
+    
+</article>
+
+    
+
+
+
+    
+        <article class="blog-post">
+    <header>
+        <h1 class="blog-post-title">
     <a class="text-dark text-decoration-none" href="/posts/cloud-watch-metircs-alarm-use-diff/">CloudWatch Metrics で変化量をアラームにする</a>
 </h1>
 
@@ -216,92 +302,6 @@
 
 
 
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/try-envoy-first/">Try envoy(GettingStarted/NGINX/HAProxy)</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        Created at: <time datetime="2021-06-30">2021-06-30</time>
-    
-    
-        Updated at: <time datetime="2021-06-30">2021-06-30</time>
-    
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/infra">infra</a>
-    
-</div>
-
-
-        
-
-    </header>
-    try envoyをやってみた 公式にものっているチュートリアルtry envoyをやってみた https://www.katacoda.com/envoyproxy チュートリアル内の設定ファイルが1.18あたりだと動かないので書き換えてみた envoyについて サービスディスカバリ Istioの内部で動いているやつ プロキシーのすごいやつ envoyのコア機能につい
-    
-    <p></p>
-    <a href="/posts/try-envoy-first/">Read More →</a>
-    
-</article>
-
-    
-
-
-
-    
-        <article class="blog-post">
-    <header>
-        <h1 class="blog-post-title">
-    <a class="text-dark text-decoration-none" href="/posts/rails-on-lambda/">Rails on Lambda</a>
-</h1>
-
-        
-
-
-<div class="blog-post-date text-secondary">
-    
-        Created at: <time datetime="2021-06-22">2021-06-22</time>
-    
-    
-        Updated at: <time datetime="2021-06-23">2021-06-23</time>
-    
-    
-</div>
-
-        
-<div class="blog-post-tags text-secondary">
-    <strong>Tags:</strong>
-    
-        <a class="btn btn-primary btn-small badge" href="/tags/backend">backend</a>
-    
-</div>
-
-
-        
-
-    </header>
-    Rails on Lambdaとは？ AWS Lambda上でRailsが動くぽいので試してみた。 過去にaws lambda上で動くrailsライクなフレームワークjetsの存在は知っていたが、Railsがそのまま動くのは知らなかった。 lambdaのコンテナイメージのサポートが関係してそう。 lamby Lamby
-    
-    <p></p>
-    <a href="/posts/rails-on-lambda/">Read More →</a>
-    
-</article>
-
-    
-
-
-
 
 
 <nav class="blog-pagination">
@@ -355,12 +355,25 @@
                 </li>
             
         
-        <li class="page-item disabled">
-            <a class="page-link" href="#" aria-label="Next" ><span aria-hidden="true">&raquo;</span></a>
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item ">
+                    <a class="page-link" href="/posts/page/4/">4</a>
+                </li>
+            
+        
+        <li class="page-item ">
+            <a class="page-link" href="/posts/page/4/" aria-label="Next" ><span aria-hidden="true">&raquo;</span></a>
         </li>
         
             <li class="page-item">
-                <a class="page-link" href="/posts/page/3/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+                <a class="page-link" href="/posts/page/4/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
             </li>
         
     </ul>
@@ -382,6 +395,14 @@
     <ol class="list-unstyled">
         
         <li>
+            <a href="/posts/bigquery-partition/">BigQueryのパーティションについて調べてみた</a>
+        </li>
+        
+        <li>
+            <a href="/posts/mysql-replication-stop/">MySQLレプリケーションストップ</a>
+        </li>
+        
+        <li>
             <a href="/posts/try-rust-note/">Rustチマチマノート</a>
         </li>
         
@@ -391,14 +412,6 @@
         
         <li>
             <a href="/posts/when-thinking-of-a-solution/">設計・進め方を考えるとき</a>
-        </li>
-        
-        <li>
-            <a href="/posts/react-use-state-set-function-to-state/">React Hooksでstateに関数(function)を設定する</a>
-        </li>
-        
-        <li>
-            <a href="/posts/rails-elasticache-memcached/">Railsとelasticache(memcached)について</a>
         </li>
         
     </ol>

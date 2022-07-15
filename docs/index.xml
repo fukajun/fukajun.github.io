@@ -6,7 +6,25 @@
     <description>Recent content on fukajun&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 18 May 2022 03:50:43 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 14:46:40 +0900</lastBuildDate><atom:link href="https://blog.fukajun.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BigQueryのパーティションについて調べてみた</title>
+      <link>https://blog.fukajun.com/posts/bigquery-partition/</link>
+      <pubDate>Fri, 15 Jul 2022 14:46:40 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/bigquery-partition/</guid>
+      <description>はじめに BigQueryを使うにあたって、クエリー料金を安く抑えるのに重要と思われる パーティション分割について調べたときのメモ パーティション分割とは? テーブルをパーティションキーに指定した値でパーティションとして分割することができる BigQuery初心者を脱出したい２（パーティシ</description>
+    </item>
+    
+    <item>
+      <title>MySQLレプリケーションストップ</title>
+      <link>https://blog.fukajun.com/posts/mysql-replication-stop/</link>
+      <pubDate>Mon, 11 Jul 2022 03:50:43 +0900</pubDate>
+      
+      <guid>https://blog.fukajun.com/posts/mysql-replication-stop/</guid>
+      <description>はじめに レプリケーションのエラーを探す RDSの場合は、対象DBインスタンスの「ログとイベント」タブから見ることができる。 show slave status;する error logを確認する サイズが大きい場合は、必要な情報がそのなかに埋もれてしまっている場合もあるので grepなどを適宜利用して絞り込みを行う テ</description>
+    </item>
+    
     <item>
       <title>Rustチマチマノート</title>
       <link>https://blog.fukajun.com/posts/try-rust-note/</link>
